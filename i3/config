@@ -193,10 +193,9 @@ bindsym --release Print exec --no-startup-id ~/bin/screenshot.py
 bindsym $mod+t exec --no-startup-id ~/bin/touchpad.sh
 
 # Specific app settings
-for_window [class="Google-chrome" title="Google Chrome"] border none
-for_window [urgent="first" class="Google-chrome"] focus
-for_window [class="Firefox" title="Mozilla Firefox"] border none
-for_window [class="Thunar" title="File Operation Progress"] floating enable
+for_window [class="Google-chrome" window_role="browser"] border none
+for_window [class="Chromium" window_role="browser"] border none
+for_window [class="Firefox" window_role="browser"] border none
 for_window [class="URxvt"] border 1pixel
 
 # Enable floating mode for pop-up windows
