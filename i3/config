@@ -130,9 +130,9 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Audio Hardware Keys ....
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec --no startup-id amixer -q -D pulse set Master 5%- unmute
+bindsym XF86AudioMute exec amixer --no-startup-id -q -D pulse set Master toggle
 
 # Pulse Audio controls
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
