@@ -19,7 +19,7 @@
 1424002505
 
 # TUI:
-al
+ar
 q0
 v2
 ov
@@ -28,129 +28,294 @@ l12
 r2
 
 # Left window history (oldest to newest):
+d/home/chris/.oh-my-zsh
+	plugins/
+6
+d/home/chris/.oh-my-zsh/plugins
+	git-prompt/
+49
+d/home/chris/.oh-my-zsh/plugins/git-prompt
+	git-prompt.plugin.zsh
+1
+d/home/chris/.oh-my-zsh/plugins
+	git-prompt/
+49
+d/home/chris/.oh-my-zsh/plugins/git-prompt
+	git-prompt.plugin.zsh
+1
+d/home/chris/.oh-my-zsh/plugins
+	git-prompt/
+49
+d/home/chris/.oh-my-zsh
+	plugins/
+6
+d/home/chris
+	dotfiles/
+5
+d/home/chris/dotfiles
+	shell/
+3
+d/home/chris/dotfiles/shell
+	gnzh-theme.zsh
+3
+d/home/chris/dotfiles
+	shell/
+3
+d/home/chris/dotfiles/shell
+	git-prompt/
+1
+d/home/chris/dotfiles/shell/git-prompt
+	git-prompt.plugin.zsh
+1
+d/home/chris/dotfiles/shell
+	aliases.sh
+1
+d/home/chris/dotfiles
+	shell/
+3
+d/home/chris
+	Downloads/
+7
+d/home/chris/Downloads
+	Video/
+2
+d/home/chris/Downloads/Video
+	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv/
+37
+d/home/chris/Downloads/Video/The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv
+	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv
+2
+d/home/chris/Downloads/Video
+	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv/
+37
+d/home/chris/Downloads
+	Video/
+2
+d/home/chris
+	Documents/
+4
+d/home/chris/Documents
+	vim-cheats
+6
+d/home/chris
+	Projects/
+11
+d/home/chris/Projects
+	hello.html
+20
 d/home/chris
 	.vifm/
 38
 d/home/chris/.vifm
-	Trash/
-1
-d/home/chris/.vifm/Trash
-	../
-0
-d/home/chris/.vifm
-	colors/
-2
-d/home/chris/.vifm/colors
-	../
-0
-d/home/chris/.vifm
-	colors/
-2
+	vifmrc
+5
 d/home/chris
-	.Xresources
-41
+	.vifm/
+38
 d/home
 	chris/
 1
 d/home/chris
-	.zsh
-53
-d/home
+	media/
+8
+d/home/chris/media
+	disk/
+1
+d/home/chris/media/disk
+	DB/
+1
+d/home/chris/media/disk/DB
 	../
 0
+d/home/chris/media/disk
+	DCIM/
+2
+d/home/chris/media/disk/DCIM
+	100OLYMP/
+1
+d/home/chris/media/disk/DCIM/100OLYMP
+	P2142605.JPG
+56
+d/home/chris/media/disk/DCIM
+	100OLYMP/
+1
+d/home/chris/media/disk
+	DCIM/
+2
+d/home/chris/media
+	disk/
+1
+d/home/chris
+	media/
+5
+d/home
+	chris/
+3
+d/home/chris
+	media/
+5
+d/home
+	chris/
+3
+d/
+	run/
+15
+d/run
+	user/
+12
+d/run/user
+	1000/
+1
+d/run/user/1000
+	systemd/
+1
+d/run/user/1000/systemd
+	../
+0
+d/run/user/1000
+	i3/
+2
+d/run/user/1000/i3
+	../
+0
+d/run/user/1000
+	i3/
+2
+d/run/user
+	1000/
+1
+d/run
+	mount/
+16
+d/run/mount
+	../
+0
+d/run
+	user/
+12
+d/run/user
+	1000/
+1
+d/run/user/1000
+	i3/
+2
+d/run/user
+	1000/
+1
+d/run
+	uuidd/
+9
+d/run/uuidd
+	../
+0
+d/run
+	mount/
+16
+d/run/mount
+	../
+0
+d/run
+	udev/
+17
+d/run/udev
+	../
+0
+d/run
+	udev/
+17
 d/
 	home/
-4
+10
 d/home
 	chris/
 1
 d/home/chris
-	.config/
+	Downloads/
+7
+d/home/chris/Downloads
+	inotify.py
+7
+d/home/chris
+	Desktop/
+3
+d/home/chris/Desktop
+	../
+0
+d/home/chris
+	Documents/
+3
+d/home
+	chris/
+1
+d/home/chris
+	dotfiles/
+4
+d/home/chris/dotfiles
+	shell/
+3
+d/home/chris
+	Projects/
+10
+d/home/chris/Projects
+	qt-examples/
+8
+d/home/chris/Projects/qt-examples
+	../
+0
+d/home/chris/Projects
+	pyqt/
 6
-d/home/chris/.config
-	kwinrc
-43
-d/home/chris
-	.kde4/
-18
-d/home/chris/.kde4
-	../
-0
-d/home/chris
-	.local/
-18
-d/home/chris/.local
-	share/
+d/home/chris/Projects/pyqt
+	pyqt5/
+2
+d/home/chris/Projects/pyqt/pyqt5
+	qmlscene/
+9
+d/home/chris/Projects/pyqt/pyqt5/qmlscene
+	python.pro-in
+3
+d/home/chris/Projects/pyqt/pyqt5
+	qmlscene/
+9
+d/home/chris/Projects/pyqt
+	pyqt5/
+2
+d/home/chris/Projects/pyqt/pyqt5
+	qmlscene/
+9
+d/home/chris/Projects/pyqt/pyqt5/qmlscene
+	python.pro-in
+3
+d/home/chris/Projects/pyqt/pyqt5
+	examples/
+5
+d/home/chris/Projects/pyqt/pyqt5/examples
+	qml/
+20
+d/home/chris/Projects/pyqt/pyqt5/examples/qml
+	referenceexamples/
 1
-d/home/chris/.local/share
-	Meltytech/
-1
-d/home/chris/.local/share/Meltytech
-	../
-0
-d/home/chris/.local/share
-	akonadi/
-4
-d/home/chris/.local
-	share/
-1
-d/home/chris
-	.oh-my-zsh/
-22
-d/home/chris/.oh-my-zsh
-	../
-0
-d/home/chris
-	dotfiles/
-52
-d/home/chris/dotfiles
-	vim/
-4
-d/home/chris/dotfiles/vim
-	.ropeproject/
-1
-d/home/chris/dotfiles/vim/.ropeproject
-	config.py
-1
-d/home/chris/dotfiles/vim
-	.ropeproject/
-1
-d/home/chris/dotfiles
-	i3/
-1
-d/home/chris/dotfiles/i3
-	../
-0
-d/home/chris/dotfiles
-	i3/
-1
-d/home/chris
-	.w3m/
-38
-d/home/chris/.w3m
-	../
-0
-d/home/chris
-	bin/
+d/home/chris/Projects/pyqt/pyqt5/examples/qml/referenceexamples
+	valuesource.py
 10
-d/home/chris/bin
-	../
-0
-d/home/chris
-	dotfiles/
-11
-d/home/chris/dotfiles
-	i3/
+d/home/chris/Projects/pyqt/pyqt5/examples/qml
+	referenceexamples/
 1
-d/home/chris
-	bin/
-10
-d/home/chris/bin
-	../
-0
+d/home/chris/Projects/pyqt/pyqt5/examples
+	qml/
+20
+d/home/chris/Projects/pyqt/pyqt5
+	examples/
+5
+d/home/chris/Projects/pyqt
+	pyqt5/
+2
+d/home/chris/Projects
+	pyqt/
+6
 d/home/chris
 	tmp/
-14
+11
 d/home/chris/tmp
 	screenshots/
 1
@@ -160,141 +325,9 @@ d/home/chris/tmp/screenshots
 d/home/chris/tmp
 	screenshots/
 1
-d/home/chris
-	Desktop/
-2
-d/home/chris/Desktop
-	../
-0
-d/home/chris
-	bin/
-9
-d/home/chris/bin
-	images/
+d/home/chris/tmp/screenshots
+	screenshot_1PNyy2.png
 1
-d/home/chris
-	dotfiles/
-10
-d/home/chris/dotfiles
-	xinitrc
-10
-d/home/chris
-	bin/
-9
-d/home/chris/bin
-	uglue/
-2
-d/home/chris/bin/uglue
-	bin/
-1
-d/home/chris/bin/uglue/bin
-	udisks-glue
-1
-d/home/chris/bin/uglue
-	bin/
-1
-d/home/chris/bin
-	pycharm
-6
-d/home/chris
-	Apps/
-1
-d/home/chris/Apps
-	pycharm-community-4.0.4/
-3
-d/home/chris/Apps/pycharm-community-4.0.4
-	../
-0
-d/home/chris/Apps
-	pycharm-community-4.0.4/
-3
-d/home/chris
-	Apps/
-1
-d/home/chris/Apps
-	pycharm-community-4.0.4/
-3
-d/home/chris
-	bin/
-9
-d/home/chris/bin
-	../
-0
-d/home/chris
-	dotfiles/
-9
-d/home/chris/dotfiles
-	../
-0
-d/home/chris
-	dotfiles/
-4
-d/home/chris/dotfiles
-	zshrc
-11
-d/home/chris
-	dotfiles_old/
-5
-d/home/chris/dotfiles_old
-	.Xresources
-9
-d/home/chris
-	Documents/
-3
-d/home/chris/Documents
-	../
-0
-d/home/chris
-	Documents/
-3
-d/home/chris/Documents
-	../
-0
-d/home/chris
-	bin/
-2
-d/home/chris/bin
-	images/
-1
-d/home/chris/bin/images
-	../
-0
-d/home/chris/bin
-	images/
-1
-d/home/chris/bin/images
-	../
-0
-d/home/chris/bin
-	bing.ogg
-2
-d/home/chris
-	Documents/
-3
-d/home/chris/Documents
-	vim-cheats
-6
-d/home/chris
-	bin/
-2
-d/home/chris/bin
-	touchpad.sh
-6
-d/home/chris
-	bin/
-2
-d/home/chris/bin
-	touchpad.sh
-6
-d/home/chris
-	bin/
-2
-d/home/chris/bin
-	touchpad.sh
-6
-d/home/chris
-	VirtualBox VMs/
-13
 d
 
 # Right window history (oldest to newest):
@@ -382,17 +415,89 @@ D/home/chris
 D/home/chris/Pictures
 	../
 0
+D/home/chris
+	Pictures/
+6
+D/home
+	chris/
+1
+D/home/chris
+	media/
+13
+D/home/chris/media
+	A104-21B2/
+1
+D/home/chris/media/A104-21B2
+	../
+0
+D/home/chris/media
+	A104-21B2/
+1
+D/home/chris
+	media/
+13
+D/home/chris/media
+	TOSHIBA/
+1
+D/home/chris/media/TOSHIBA
+	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv
+14
+D/home/chris/media
+	TOSHIBA/
+1
+D/home/chris
+	media/
+13
+D/home
+	chris/
+1
+D/
+	home/
+4
+D/home
+	chris/
+1
+D/home/chris
+	Pictures/
+6
+D/home/chris/Pictures
+	Dublin/
+7
+D/home/chris/Pictures/Dublin
+	../
+0
+D/home/chris/Pictures
+	Dublin/
+7
+D/home/chris/Pictures/Dublin
+	P2202607.JPG
+1
+D/home/chris/Pictures
+	Dublin/
+7
+D/home/chris/Pictures/Dublin
+	DSC_0032.JPG
+1
+D/home/chris/Pictures
+	Creag Mac Ranaich and Meall an t-Sealladh/
+4
+D/home/chris/Pictures/Creag Mac Ranaich and Meall an t-Sealladh
+	PB162364.JPG
+10
 D
 
 # Command line history (oldest to newest):
 :empty
 :*.un~
-:delete
 :w
 :del
+:delete
+:mkdir Dublin
 :q
 
 # Search history (oldest to newest):
+/œ
+/git
 
 # Prompt history (oldest to newest):
 papps
@@ -403,35 +508,10 @@ pcalendar
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/chris/.vifm/Trash/000_images
 
 # Directory stack (oldest to newest):
 
 # Trash content:
-t/home/chris/.vifm/Trash/000_..archey3.cfg.un~
-	/home/chris/..archey3.cfg.un~
-t/home/chris/.vifm/Trash/000_..asoundrc.un~
-	/home/chris/..asoundrc.un~
-t/home/chris/.vifm/Trash/000_..bashrc.un~
-	/home/chris/..bashrc.un~
-t/home/chris/.vifm/Trash/000_..hosts.un~
-	/home/chris/..hosts.un~
-t/home/chris/.vifm/Trash/000_..inputrc.un~
-	/home/chris/..inputrc.un~
-t/home/chris/.vifm/Trash/000_..rtorrent.rc.un~
-	/home/chris/..rtorrent.rc.un~
-t/home/chris/.vifm/Trash/000_..uglue.un~
-	/home/chris/..uglue.un~
-t/home/chris/.vifm/Trash/000_..vimrc.un~
-	/home/chris/..vimrc.un~
-t/home/chris/.vifm/Trash/000_..xinitrc.un~
-	/home/chris/..xinitrc.un~
-t/home/chris/.vifm/Trash/000_..Xresources.un~
-	/home/chris/..Xresources.un~
-t/home/chris/.vifm/Trash/000_..zshrc.un~
-	/home/chris/..zshrc.un~
-t/home/chris/.vifm/Trash/000_images
-	/home/chris/bin/images
 
 # State:
 f

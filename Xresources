@@ -9,12 +9,14 @@ URxvt*scrollBar: false
 URxvt*visualBell: false
 URxvt*urgentOnBell: false
 URxvt*iso14755: False
-URxvt.transparent:   true
-URxvt.shading:       20
+! URxvt.transparent:   true
+! URxvt.shading:       20
+URxvt.depth: 32
+URxvt.background: rgba:0000/0000/0200/c800
 
 ! -- Click URLs -- !
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/google-chrome-beta
+URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 
 ! Fix the Ctrl+Direction keymappings in uRxvt

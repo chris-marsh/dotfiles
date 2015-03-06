@@ -30,7 +30,6 @@ set nobackup
 set noswapfile
 set undofile
 
-set colorcolumn=99
 filetype off
 
 let g:pymode_rope = 0
@@ -53,6 +52,9 @@ syntax on
 
 set background=dark
 colorscheme kolor2
+set colorcolumn=99
+" highlight ColorColumn ctermbg=0
+" highlight CursorLine cterm=None ctermbg=darkGrey
 
 let mapleader=","
 
