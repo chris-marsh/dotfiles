@@ -19,300 +19,222 @@
 1424002505
 
 # TUI:
-ar
+al
 q0
 v2
 ov
 m-1
 l12
-r2
+r12
 
 # Left window history (oldest to newest):
-d/home/chris/.oh-my-zsh
-	plugins/
-6
-d/home/chris/.oh-my-zsh/plugins
-	git-prompt/
-49
-d/home/chris/.oh-my-zsh/plugins/git-prompt
-	git-prompt.plugin.zsh
+d/home/chris/Downloads/Video
+	Person.of.Interest.S04E15.HDTV.x264-LOL/
+48
+d/home/chris/Downloads/Video/Person.of.Interest.S04E15.HDTV.x264-LOL
+	poi.0415.mp4
 1
-d/home/chris/.oh-my-zsh/plugins
-	git-prompt/
-49
-d/home/chris/.oh-my-zsh/plugins/git-prompt
-	git-prompt.plugin.zsh
+d/home/chris/Downloads/Video
+	Person.of.Interest.S04E16.HDTV.x264-LOL/
+48
+d/home/chris/Downloads/Video/Person.of.Interest.S04E16.HDTV.x264-LOL
+	poi.0416.mp4
 1
-d/home/chris/.oh-my-zsh/plugins
-	git-prompt/
-49
-d/home/chris/.oh-my-zsh
-	plugins/
-6
+d/home/chris/Downloads/Video
+	Suits.S04E16.HDTV.x264-ASAP/
+48
+d/home/chris/Downloads
+	Video/
+1
 d/home/chris
-	dotfiles/
-5
-d/home/chris/dotfiles
-	shell/
-3
-d/home/chris/dotfiles/shell
-	gnzh-theme.zsh
-3
-d/home/chris/dotfiles
-	shell/
-3
-d/home/chris/dotfiles/shell
-	git-prompt/
-1
-d/home/chris/dotfiles/shell/git-prompt
-	git-prompt.plugin.zsh
-1
-d/home/chris/dotfiles/shell
-	aliases.sh
-1
-d/home/chris/dotfiles
-	shell/
+	Downloads/
+12
+d/home
+	chris/
 3
 d/home/chris
 	Downloads/
-7
-d/home/chris/Downloads
-	Video/
-2
-d/home/chris/Downloads/Video
-	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv/
-37
-d/home/chris/Downloads/Video/The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv
-	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv
-2
-d/home/chris/Downloads/Video
-	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv/
-37
-d/home/chris/Downloads
-	Video/
+12
+d/home/chris/.vifm/Trash
+	../
+0
+d/home/chris/.vifm
+	Trash/
 2
 d/home/chris
-	Documents/
-4
-d/home/chris/Documents
-	vim-cheats
-6
+	Downloads/
+11
+d/home
+	chris/
+3
 d/home/chris
 	Projects/
-11
+13
 d/home/chris/Projects
-	hello.html
+	a.out
+22
+d/home/chris
+	tmp/
+2
+d/home/chris/tmp
+	screenshots/
+1
+d/home/chris/tmp/screenshots
+	2015-03-05-222300_1920x1080_scrot.png
+14
+d/home/chris/tmp
+	screenshots/
+1
+d/home/chris
+	tmp/
+2
+d/home
+	chris/
+3
+d/home/chris
+	tmp/
+2
+d/home/chris/tmp
+	screenshots/
+1
+d/home/chris
+	tmp/
+2
+d/home
+	chris/
+3
+d/home/chris
+	VirtualBox VMs/
+1
+d/home/chris/VirtualBox VMs
+	../
+0
+d/home/chris
+	VirtualBox VMs/
+1
+d/home
+	chris/
+3
+d/home/chris
+	Documents/
+3
+d/home/chris/Documents
+	howto-mount-sd-card
+2
+d/home/chris
+	Projects/
+10
+d/home/chris/Projects
+	a.out
 20
 d/home/chris
-	.vifm/
-38
-d/home/chris/.vifm
-	vifmrc
-5
-d/home/chris
-	.vifm/
-38
-d/home
-	chris/
-1
-d/home/chris
-	media/
-8
-d/home/chris/media
-	disk/
-1
-d/home/chris/media/disk
-	DB/
-1
-d/home/chris/media/disk/DB
-	../
-0
-d/home/chris/media/disk
-	DCIM/
-2
-d/home/chris/media/disk/DCIM
-	100OLYMP/
-1
-d/home/chris/media/disk/DCIM/100OLYMP
-	P2142605.JPG
-56
-d/home/chris/media/disk/DCIM
-	100OLYMP/
-1
-d/home/chris/media/disk
-	DCIM/
-2
-d/home/chris/media
-	disk/
-1
-d/home/chris
-	media/
-5
-d/home
-	chris/
-3
-d/home/chris
-	media/
-5
-d/home
-	chris/
-3
-d/
-	run/
-15
-d/run
-	user/
-12
-d/run/user
-	1000/
-1
-d/run/user/1000
-	systemd/
-1
-d/run/user/1000/systemd
-	../
-0
-d/run/user/1000
-	i3/
-2
-d/run/user/1000/i3
-	../
-0
-d/run/user/1000
-	i3/
-2
-d/run/user
-	1000/
-1
-d/run
-	mount/
-16
-d/run/mount
-	../
-0
-d/run
-	user/
-12
-d/run/user
-	1000/
-1
-d/run/user/1000
-	i3/
-2
-d/run/user
-	1000/
-1
-d/run
-	uuidd/
+	Pictures/
 9
-d/run/uuidd
+d/home/chris/Pictures
+	Ben Ledi/
+2
+d/home/chris/Pictures/Ben Ledi
+	PB232408.JPG
+3
+d/home/chris/Pictures
+	Creag Mac Ranaich and Meall an t-Sealladh/
+4
+d/home/chris/Pictures/Creag Mac Ranaich and Meall an t-Sealladh
 	../
 0
-d/run
-	mount/
-16
-d/run/mount
+d/home/chris/Pictures
+	Creag Mac Ranaich and Meall an t-Sealladh/
+4
+d/home/chris
+	Pictures/
+9
+d/home
+	chris/
+1
+d/home/chris
+	media/
+7
+d/home/chris/media
 	../
 0
-d/run
-	udev/
-17
-d/run/udev
+d/home/chris
+	.urxvt/
+13
+d/home/chris/.urxvt
 	../
 0
-d/run
-	udev/
-17
+d/home/chris
+	bin/
+2
+d/home/chris/bin
+	udp-listen.py
+11
+d/home/chris
+	VirtualBox VMs/
+13
+d/home/chris/VirtualBox VMs
+	Test/
+1
+d/home/chris
+	media/
+7
+d/home
+	chris/
+1
 d/
 	home/
-10
-d/home
-	chris/
-1
-d/home/chris
-	Downloads/
-7
-d/home/chris/Downloads
-	inotify.py
-7
-d/home/chris
-	Desktop/
-3
-d/home/chris/Desktop
-	../
-0
-d/home/chris
-	Documents/
-3
-d/home
-	chris/
-1
-d/home/chris
-	dotfiles/
 4
-d/home/chris/dotfiles
-	shell/
-3
+d/home
+	chris/
+1
 d/home/chris
-	Projects/
-10
-d/home/chris/Projects
-	qt-examples/
-8
-d/home/chris/Projects/qt-examples
+	.config/
+5
+d/home/chris/.config
+	cmus/
+7
+d/home/chris/.config/cmus
 	../
 0
-d/home/chris/Projects
-	pyqt/
-6
-d/home/chris/Projects/pyqt
-	pyqt5/
-2
-d/home/chris/Projects/pyqt/pyqt5
-	qmlscene/
-9
-d/home/chris/Projects/pyqt/pyqt5/qmlscene
-	python.pro-in
-3
-d/home/chris/Projects/pyqt/pyqt5
-	qmlscene/
-9
-d/home/chris/Projects/pyqt
-	pyqt5/
-2
-d/home/chris/Projects/pyqt/pyqt5
-	qmlscene/
-9
-d/home/chris/Projects/pyqt/pyqt5/qmlscene
-	python.pro-in
-3
-d/home/chris/Projects/pyqt/pyqt5
-	examples/
+d/home/chris/.config
+	cmus/
+7
+d/home/chris
+	.config/
 5
-d/home/chris/Projects/pyqt/pyqt5/examples
-	qml/
-20
-d/home/chris/Projects/pyqt/pyqt5/examples/qml
-	referenceexamples/
-1
-d/home/chris/Projects/pyqt/pyqt5/examples/qml/referenceexamples
-	valuesource.py
-10
-d/home/chris/Projects/pyqt/pyqt5/examples/qml
-	referenceexamples/
-1
-d/home/chris/Projects/pyqt/pyqt5/examples
-	qml/
-20
-d/home/chris/Projects/pyqt/pyqt5
-	examples/
+d/home/chris/.config
+	cmus/
+7
+d/home/chris/.config/cmus
+	command-history
 5
-d/home/chris/Projects/pyqt
-	pyqt5/
-2
-d/home/chris/Projects
-	pyqt/
-6
+d/home/chris/.config
+	cmus/
+7
+d/home/chris
+	Music/
+8
+d/home
+	chris/
+1
+d/
+	home/
+4
+d/home
+	chris/
+1
+d/home/chris
+	Music/
+8
+d/home/chris/Music
+	../
+0
+d/home/chris
+	Pictures/
+9
+d/home
+	chris/
+1
 d/home/chris
 	tmp/
 11
@@ -320,149 +242,95 @@ d/home/chris/tmp
 	screenshots/
 1
 d/home/chris/tmp/screenshots
-	../
-0
+	2015-03-05-222300_1920x1080_scrot.png
+2
 d/home/chris/tmp
 	screenshots/
 1
-d/home/chris/tmp/screenshots
-	screenshot_1PNyy2.png
+d/home/chris
+	tmp/
+11
+d/home/chris/tmp
+	screenshots/
 1
+d/home/chris
+	Downloads/
+6
+d/home/chris/Downloads
+	Video/
+2
+d/home/chris/Downloads/Video
+	Suits.S04E16.HDTV.x264-ASAP/
+24
+d/home/chris/Downloads
+	incomplete/
+1
+d/home/chris/Downloads/incomplete
+	../
+0
+d/home/chris/Downloads
+	incomplete/
+1
+d/home/chris
+	dotfiles/
+4
+d/home/chris/dotfiles
+	bin/
+1
+d/home/chris/dotfiles/bin
+	udp-listen.py
+11
+d/home/chris/dotfiles
+	i3/
+2
+d/home/chris/dotfiles/i3
+	../
+0
+d/home/chris/dotfiles
+	i3/
+2
+d/home/chris/dotfiles/i3
+	../
+0
+d/home/chris/dotfiles
+	vim/
+5
+d/home/chris/dotfiles/vim
+	../
+0
+d/home/chris/dotfiles
+	vifm/
+4
+d/home/chris
+	Pictures/
+9
+d/home/chris/Pictures
+	wallpaper/
+11
+d/home/chris
+	Pictures/
+9
+d/home/chris/Pictures
+	Beinn Odhar/
+1
+d/home/chris/Pictures/Beinn Odhar
+	P2142566.JPG
+1
+d/home/chris/Pictures
+	Beinn Odhar/
+1
+d/home/chris
+	Downloads/
+6
+d/home/chris/Downloads
+	Video/
+2
+d/home/chris
+	VirtualBox VMs/
+13
 d
 
 # Right window history (oldest to newest):
-D/home/chris
-	Pictures/
-5
-D/home/chris/Pictures
-	Beinn Odhar/
-1
-D/home/chris/Pictures/Beinn Odhar
-	P2142566.JPG
-1
-D/home/chris/Pictures
-	../
-0
-D/home/chris
-	Pictures/
-5
-D/home
-	chris/
-1
-D/home/chris
-	dotfiles/
-9
-D/home/chris/dotfiles
-	vifm/
-4
-D/home/chris/dotfiles/vifm
-	../
-0
-D/home/chris/dotfiles
-	vifm/
-4
-D/home/chris
-	tmp/
-12
-D/home/chris/tmp
-	../
-0
-D/home/chris
-	tmp/
-12
-D/home
-	chris/
-1
-D/home/chris
-	.bin/
-4
-D/home/chris/.bin
-	../
-0
-D/home/chris
-	Downloads/
-3
-D/home/chris/Downloads
-	Brody Dalle - Diploid Love (2014)/
-1
-D/home/chris/Downloads/Brody Dalle - Diploid Love (2014)
-	../
-0
-D/home/chris/Downloads
-	Video/
-1
-D/home/chris
-	Music/
-4
-D/home/chris/Music
-	Brody Dalle - Diploid Love (2014)/
-3
-D/home/chris/Music/Brody Dalle - Diploid Love (2014)
-	03 - Don't Mess With Me(5).mp3
-7
-D/home/chris/Music
-	Brody Dalle - Diploid Love (2014)/
-3
-D/home/chris/Music/Brody Dalle - Diploid Love (2014)
-	09 - Parties For Prostitutes.mp3
-9
-D/home/chris/Music
-	Arctic Monkeys/
-1
-D/home/chris
-	Pictures/
-5
-D/home/chris/Pictures
-	../
-0
-D/home/chris
-	Pictures/
-6
-D/home
-	chris/
-1
-D/home/chris
-	media/
-13
-D/home/chris/media
-	A104-21B2/
-1
-D/home/chris/media/A104-21B2
-	../
-0
-D/home/chris/media
-	A104-21B2/
-1
-D/home/chris
-	media/
-13
-D/home/chris/media
-	TOSHIBA/
-1
-D/home/chris/media/TOSHIBA
-	The Imitation Game 2014 DVDSCR X264-PLAYNOW.mkv
-14
-D/home/chris/media
-	TOSHIBA/
-1
-D/home/chris
-	media/
-13
-D/home
-	chris/
-1
-D/
-	home/
-4
-D/home
-	chris/
-1
-D/home/chris
-	Pictures/
-6
-D/home/chris/Pictures
-	Dublin/
-7
 D/home/chris/Pictures/Dublin
 	../
 0
@@ -482,36 +350,362 @@ D/home/chris/Pictures
 	Creag Mac Ranaich and Meall an t-Sealladh/
 4
 D/home/chris/Pictures/Creag Mac Ranaich and Meall an t-Sealladh
-	PB162364.JPG
+	PB162366.JPG
+11
+D/home/chris/Pictures
+	Dublin/
+7
+D/home/chris/Pictures/Dublin
+	DSC_0036.JPG
+4
+D/home/chris/Pictures
+	Culter Fell/
+6
+D/home/chris/Pictures/Culter Fell
+	P2082547.JPG
+4
+D/home/chris/Pictures
+	Ettrick Donalds/
+8
+D/home/chris/Pictures/Ettrick Donalds
+	PB292440.JPG
+1
+D/home/chris/Pictures
+	Ettrick Donalds/
+8
+D/home/chris
+	media/
+12
+D/home/chris/media
+	A104-21B2/
+1
+D/home/chris/media/A104-21B2
+	Suits/
+12
+D/home/chris/media/A104-21B2/Suits
+	suits.0414.mp4
+4
+D/home/chris/media/A104-21B2
+	Person Of Interest/
 10
+D/home/chris/media/A104-21B2/Person Of Interest
+	../
+0
+D/home/chris/media/A104-21B2
+	Ascension/
+1
+D/home/chris/media/A104-21B2/Ascension
+	../
+0
+D/home/chris/media/A104-21B2
+	Constantine/
+1
+D/home/chris/media/A104-21B2/Constantine
+	constantine.109.hdtv-lol.mp4
+1
+D/home/chris/media/A104-21B2
+	Extant/
+2
+D/home/chris/media/A104-21B2/Extant
+	../
+0
+D/home/chris/media/A104-21B2
+	Forever/
+3
+D/home/chris/media/A104-21B2/Forever
+	../
+0
+D/home/chris/media/A104-21B2
+	Grimm/
+4
+D/home/chris/media/A104-21B2/Grimm
+	../
+0
+D/home/chris/media/A104-21B2
+	Person Of Interest/
+9
+D/home/chris/media/A104-21B2/Person Of Interest
+	poi.0410.mp4
+2
+D/home/chris/media/A104-21B2
+	Person Of Interest/
+9
+D/home/chris/media/A104-21B2/Person Of Interest
+	poi.0416.mp4
+8
+D/home/chris/media/A104-21B2
+	Person Of Interest/
+9
+D/home/chris/media/A104-21B2/Person Of Interest
+	poi.0416.mp4
+8
+D/home/chris/media/A104-21B2
+	Suits/
+11
+D/home/chris/media/A104-21B2/Suits
+	../
+0
+D/home/chris/media/A104-21B2
+	Person Of Interest/
+9
+D/home/chris/media/A104-21B2/Person Of Interest
+	poi.0416.mp4
+8
+D/home/chris/media/A104-21B2
+	Person Of Interest/
+9
+D/home/chris/media
+	A104-21B2/
+1
+D/home/chris
+	media/
+7
+D/home/chris/media
+	../
+0
+D/home/chris
+	dotfiles_old/
+5
+D/home
+	chris/
+1
+D/home/chris
+	dotfiles_old/
+5
+D/home
+	chris/
+1
+D/home/chris
+	dotfiles_old/
+5
+D/home/chris/dotfiles_old
+	../
+0
+D/home/chris
+	dotfiles_old/
+5
+D/home
+	chris/
+1
+D/home/chris
+	Apps/
+1
+D/home/chris/Apps
+	glowing-bear/
+1
+D/home/chris
+	Documents/
+3
+D/home/chris/Documents
+	../
+0
+D/home/chris
+	dotfiles/
+4
+D/home/chris/dotfiles
+	shell/
+3
+D/home/chris/dotfiles/shell
+	../
+0
+D/home/chris/dotfiles
+	shell/
+3
+D/home/chris/dotfiles/shell
+	../
+0
+D/home/chris/dotfiles
+	shell/
+3
+D/home/chris
+	Downloads/
+6
+D/home/chris/Downloads
+	Video/
+2
+D/home/chris
+	Pictures/
+9
+D/home/chris/Pictures
+	Ettrick Donalds/
+8
+D/home/chris
+	Projects/
+10
+D/home/chris/Projects
+	../
+0
+D/home/chris
+	bin/
+2
+D/home/chris/bin
+	../
+0
+D/home/chris
+	Documents/
+3
+D/home/chris/Documents
+	../
+0
+D/home/chris
+	Videos/
+12
+D/home/chris/Videos
+	../
+0
+D/home/chris
+	VirtualBox VMs/
+13
+D/home/chris/VirtualBox VMs
+	../
+0
+D/home/chris
+	VirtualBox VMs/
+13
+D/home/chris/VirtualBox VMs
+	Test/
+1
+D/home/chris/VirtualBox VMs/Test
+	../
+0
+D/home/chris/VirtualBox VMs
+	Test/
+1
+D/home/chris
+	Projects/
+10
+D/home/chris/Projects
+	../
+0
+D/home/chris
+	bin/
+2
+D/home/chris/bin
+	../
+0
+D/home/chris
+	Documents/
+3
+D/home/chris/Documents
+	../
+0
+D/home/chris
+	Projects/
+10
+D/home/chris/Projects
+	evilvte/
+2
+D/home/chris/Projects/evilvte
+	src/
+2
+D/home/chris/Projects/evilvte/src
+	process.sh
+15
+D/home/chris/Projects/evilvte
+	src/
+2
+D/home/chris/Projects/evilvte/src
+	process.sh
+15
+D/home/chris/Projects/evilvte
+	src/
+2
+D/home/chris/Projects
+	evilvte/
+2
+D/home/chris
+	Music/
+8
+D/home/chris/Music
+	../
+0
+D/home/chris
+	Projects/
+10
+D/home/chris/Projects
+	evilvte/
+2
+D/home/chris/Projects/evilvte
+	src/
+2
+D/home/chris/Projects/evilvte/src
+	showvte
+16
 D
 
 # Command line history (oldest to newest):
-:empty
-:*.un~
 :w
 :del
-:delete
 :mkdir Dublin
+:delete! *.mp4
+:cd ~/.vifm/Trash/
+:clear
+:empty
+:colorscheme solarized-dark
+:colorscheme desert
+::
+:colorscheme Default
+:colorscheme 
 :q
+:*.un~
+:touch arse
+:vim eletric.theme
+:sh
+:colorscheme zenburn
+:touch bum
+:touch yerbum.sh
+:delete!
+:hello
+:test
+:home
+:h
+:cd
+:colorscheme matrix
+:mkdir wallpaper
+:delete
 
 # Search history (oldest to newest):
 /œ
 /git
+/cmus
 
 # Prompt history (oldest to newest):
 papps
 pApps
 pVideos
 pcalendar
+pcalendar_on_i3
+psuits.0416
+psuits.0413
+ppoi.0415
+po
+ppoi.0416
+ps
 
 # Local filter history (oldest to newest):
 
 # Registers:
+""/home/chris/.vifm/Trash/000_2015-03-07-223342_1920x1080_scrot.png
 
 # Directory stack (oldest to newest):
 
 # Trash content:
+t/home/chris/.vifm/Trash/000_newstatus.conf
+	/home/chris/dotfiles/i3/newstatus.conf
+t/home/chris/.vifm/Trash/000_temp
+	/home/chris/dotfiles/i3/temp
+t/home/chris/.vifm/Trash/000_aur_evilvte_config.h
+	/home/chris/dotfiles/aur_evilvte_config.h
+t/home/chris/.vifm/Trash/000_vim(1)
+	/home/chris/dotfiles/vim(1)
+t/home/chris/.vifm/Trash/000_2015-03-07-214128_1920x1080_scrot.png
+	/home/chris/2015-03-07-214128_1920x1080_scrot.png
+t/home/chris/.vifm/Trash/000_2015-03-07-214657_1920x1080_scrot.png
+	/home/chris/2015-03-07-214657_1920x1080_scrot.png
+t/home/chris/.vifm/Trash/000_2015-03-07-214758_1920x1080_scrot.png
+	/home/chris/2015-03-07-214758_1920x1080_scrot.png
+t/home/chris/.vifm/Trash/000_2015-03-07-223342_1920x1080_scrot.png
+	/home/chris/2015-03-07-223342_1920x1080_scrot.png
 
 # State:
 f

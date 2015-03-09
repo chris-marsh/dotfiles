@@ -22,7 +22,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start Sakura terminal
-bindsym $mod+Return exec sakura
+bindsym $mod+Return exec ~/bin/evilvte
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -130,18 +130,18 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Audio Hardware Keys ....
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec --no startup-id amixer -q -D pulse set Master 5%- unmute
-bindsym XF86AudioMute exec amixer --no-startup-id -q -D pulse set Master toggle
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute
+# bindsym XF86AudioLowerVolume exec --no startup-id amixer -q -D pulse set Master 5%- unmute
+# bindsym XF86AudioMute exec amixer --no-startup-id -q -D pulse set Master toggle
 
 # Pulse Audio controls
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
  
 # Take a screenshot and save it in ~/tmp/screenshots
 bindsym --release Print exec --no-startup-id ~/bin/screenshot.py
@@ -169,7 +169,7 @@ mode "$mode_system" {
 bindsym Pause mode "$mode_system"
 
 # Default colors ...        border   backgr.  text      indicator
-client.focused              #4c7899  #285577  #ffffff   #2e9ef4
+client.focused              #4c7899  #00a5ff  #ffffff   #2e9ef4
 client.focused_inactive     #333333  #5f676a  #ffffff   #484e50
 client.unfocused            #333333  #222222  #888888   #292d2e
 client.urgent               #2f343a  #900000  #ffffff   #900000
@@ -189,8 +189,8 @@ bar {
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2f343a #900000 #ffffff
 
-#        statusline         #8b4c39
-#        focused_workspace  #ee8262 #8b4c39 #ffffff
+        # statusline         #8b4c39
+        # focused_workspace  #ee8262 #8b4c39 #ffffff
     }
 	font pango:DejaVu Sans Mono, FontAwesome 11
     status_command i3status -c ~/.i3/i3status.conf
@@ -225,8 +225,8 @@ exec --no-startup-id xautolock -time 15 -locker ~/bin/autolock.sh
 exec --no-startup-id /usr/bin/xset b off
 exec --no-startup-id compton --config ~/.compton.conf 
 exec --no-startup-id udiskie --tray
-exec --no-startup-id i3-msg 'workspace 1:irc; exec sakura'
-exec --no-startup-id i3-msg 'workspace 2:www; exec sakura'
-exec --no-startup-id i3-msg 'workspace 3:dev; exec sakura'
-exec --no-startup-id i3-msg 'workspace 4:fm; exec sakura'
+exec --no-startup-id i3-msg 'workspace 1:irc; exec ~/bin/evilvte'
+exec --no-startup-id i3-msg 'workspace 2:www; exec ~/bin/evilvte'
+exec --no-startup-id i3-msg 'workspace 3:dev; exec ~/bin/evilvte'
+exec --no-startup-id i3-msg 'workspace 4:fm; exec ~/bin/evilvte'
 

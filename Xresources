@@ -9,10 +9,10 @@ URxvt*scrollBar: false
 URxvt*visualBell: false
 URxvt*urgentOnBell: false
 URxvt*iso14755: False
-! URxvt.transparent:   true
-! URxvt.shading:       20
-URxvt.depth: 32
-URxvt.background: rgba:0000/0000/0200/c800
+URxvt.transparent:   true
+URxvt.shading:       20
+! URxvt.depth: 32
+! URxvt.background: rgba:0000/0000/0200/c800
 
 ! -- Click URLs -- !
 URxvt.perl-ext-common: default,matcher
@@ -27,7 +27,7 @@ URxvt.keysym.Control-Right:	\033[1;5C
 
 ! -- uRxvt Font -- !
 URxvt.font: xft:monaco:size=10
-URxvt.boldFont: xft:monaco:bold:size=10
+! URxvt.boldFont: xft:monaco:bold:size=10
 URxvt*fading:  0
 
 ! -- XTerm Font -- !
