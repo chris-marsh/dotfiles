@@ -152,22 +152,6 @@ bindsym $mod+t exec --no-startup-id ~/bin/touchpad.sh
 # Launch a calendar viewer
 bindsym $mod+c exec --no-startup-id ~/.bin/calendar.py
 
-# Bind Pause key to show menu in the tray, for ...
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"  
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym Pause mode "$mode_system"
-
 # Default colors ...        border   backgr.  text      indicator
 client.focused              #4c7899  #00a5ff  #ffffff   #2e9ef4
 client.focused_inactive     #333333  #5f676a  #ffffff   #484e50
@@ -217,14 +201,40 @@ exec --no-startuo-id xset m 3/2 4
 # https://bugs.launchpad.net/ubuntu/+source/unity-2d/+bug/830348
 set $Locker ~/bin/autolock.sh && sleep 1
 
-# Startup programs
+# Bind Pause key to show menu in the tray, for ...
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym Pause mode "$mode_system"
+
+# -- Startup programs -- #
+
+# Run dunst for notifications
 exec --no-startup-id dunst -conf ~/.i3/dunst.conf
+# Use feh to set a workspace background image
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
-exec --no-startup-id ~/bin/udp-listen.py
-exec --no-startup-id xautolock -time 15 -locker ~/bin/autolock.sh
+# Blank the monitor after 10 minutes (600 seconds) ...
+exec --no-startup-id xset dpms 600
+# And suspend the laptop after a further 10 minutes (20 minute total) ...
+exec --no-startup-id xautolock -time 20 -locker ~/bin/autolock.sh
+# Switch off the annoying terminal bell
 exec --no-startup-id /usr/bin/xset b off
+# Start compton for transparancey effects
 exec --no-startup-id compton --config ~/.compton.conf 
+# udiskie to automount usb,mmc,etc
 exec --no-startup-id udiskie --tray
+
+# Create and name workspaces
 exec --no-startup-id i3-msg 'workspace 1:irc; exec ~/bin/evilvte'
 exec --no-startup-id i3-msg 'workspace 2:www; exec ~/bin/evilvte'
 exec --no-startup-id i3-msg 'workspace 3:dev; exec ~/bin/evilvte'

@@ -26,7 +26,7 @@ set ruler
 set cursorline
 set novisualbell
 set noerrorbells
-set nobackup
+set nobackup noswapfile
 set noswapfile
 set undofile
 
@@ -75,7 +75,7 @@ nnoremap <silent> <C-Up> <C-w>k
 nnoremap <silent> <C-Right> <C-w>l
 
 " Tab navigation
-nnoremap <C-Tab>  :tabprevious<CR>
+" nnoremap <C-Tab>  :tabprevious<CR>
 nnoremap <C-Tab>  :tabnext<CR>
 nnoremap <C-t>    :tabnew<CR>
 
@@ -107,6 +107,13 @@ endfunction
 " Have the status line always visible
 set laststatus=2
 set statusline=\ %{HasMouse()}\ \>\ %{HasPaste()}\ \>\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+" set statusline=\ %t\ %w%m%r%=[%{strlen(&ft)?&ft:'no\ ft'}]\ %l:%v\ 
+
+" hi statusline insert/normal mode
+au InsertLeave * highlight StatusLine      ctermfg=none  ctermbg=24  cterm=none
+au InsertEnter * highlight StatusLine      ctermfg=0     ctermbg=10  cterm=none
+
 
 " Set mouse on by default and toggle with F3
 set mouse=a
