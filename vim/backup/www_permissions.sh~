@@ -1,4 +1,0 @@
-#!/bin/sh
-
-chgrp -R http ~/www
-find ~/www -type f -exec chmod o-rw,ug+rw,-x {} + -o -type d -exec chmod -s,o-rwx,ug+rwx {} +

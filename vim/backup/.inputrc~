@@ -1,6 +1,0 @@
-set completion-ignore-case on
-set mark-symlinked-directories on
-set show-all-if-ambiguous on
-TAB: menu-complete
-"\e[Z": "\e-1\C-i"
-set bell-style none
