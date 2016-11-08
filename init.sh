@@ -1,4 +1,5 @@
 #!/bin/bash
+# Must be executed with 'dotfiles' as the working directory
 here=$(pwd)
 ln -s $here/Xresources ~/.Xresources
 ln -s $here/inputrc ~/.inputrc
