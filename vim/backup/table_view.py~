@@ -1,0 +1,115 @@
+import sys
+from PyQt5.QtWidgets import *
+from PyQt5.QtSql import *
+from PyQt5.QtCore import Qt, pyqtSignal
+
+
+class CustomerSqlTableModel(QSqlTableModel):
+    def __init__(self):
+        super(CustomerSqlTableModel, self).__init__()
+
+        self.setTable("customers")
+        self.setEditStrategy(QSqlTableModel.OnFieldChange)
+        self.select()
+        self.setHeaderData(0, Qt.Horizontal, "Account")
+        self.setHeaderData(1, Qt.Horizontal, "Practice Name")
+        self.setHeaderData(2, Qt.Horizontal, "Telephone No")
+        self.setHeaderData(3, Qt.Horizontal, "Contact")
+
+
+class CustomerSqlQueryModel(QSqlQueryModel):
+    def __init__(self):
+        super(CustomerSqlQueryModel, self).__init__()
+
+        self.setQuery("SELECT id, name, contact, telephone FROM customers")
+        self.setHeaderData(0, Qt.Horizontal, "ID")
+        self.setHeaderData(1, Qt.Horizontal, "Name")
+        self.setHeaderData(2, Qt.Horizontal, "Contact")
+        self.setHeaderData(3, Qt.Horizontal, "Telephone")
+
+    def setSearchText(self, searchText):
+        print(searchText)
+        query = QSqlQuery()
+        sql = "SELECT id, name, contact, telephone FROM customers WHERE upper(name) LIKE upper('%{0}%')".format(searchText)
+        query.prepare(sql)
+        query.exec_()
+        self.setQuery(query)
+
+
+class CustomerTableView(QTableView):
+    def __init__(self):
+        super(CustomerTableView, self).__init__()
+
+        self.verticalHeader().hide()
+        self.setSelectionMode(QAbstractItemView.SingleSelection)
+        self.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.setAlternatingRowColors(True)
+        self.setShowGrid(False)
+        self.setWordWrap(False)
+        self.horizontalHeader().setDefaultAlignment(Qt.AlignLeft)
+        self.setModel(CustomerSqlQueryModel())
+        self.setColumnHidden(0, True)
+
+    def setColumnWidths(self):
+        self.setColumnWidth(1, self.width()/3)
+        self.setColumnWidth(2, self.width()/3-1)
+        self.setColumnWidth(3, self.width()/3-1)
+
+    def resizeEvent(self,event):
+        self.setColumnWidths()
+
+    def updateSql(self, text):
+        self.model().setSearchText(text)
+
+
+class FilterEdit(QLineEdit):
+
+    def __init__(self):
+        super(FilterEdit, self).__init__()
+
+
+class MainForm(QMainWindow):
+
+    def __init__(self):
+        super(MainForm, self).__init__()
+
+        self.table = CustomerTableView()
+        self.setCentralWidget(self.table)
+
+app = QApplication(sys.argv)
+
+db = QSqlDatabase.addDatabase("QPSQL")
+db.setHostName("93.93.129.62")
+db.setDatabaseName("modern")
+db.setPort(3334)
+db.setUserName("modlab")
+db.setPassword("moderneyewear")
+
+if not db.open():
+    QMessageBox.warning(None, "ModLab Database Error", db.lastError().text())
+    sys.exit(1)
+
+form = QWidget()
+# form.setFixedWidth(800)
+# form.setFixedHeight(400)
+
+myTable = CustomerTableView()
+filterEdit = FilterEdit()
+filterEdit.textChanged.connect(myTable.updateSql)
+
+myToolbar = QToolBar()
+myToolbar.addWidget(QPushButton("Record"))
+myToolbar.addSeparator()
+myToolbar.addWidget(QLabel("Filter: "))
+myToolbar.addWidget(filterEdit)
+myToolbar.addWidget(QPushButton("Go"))
+
+form_layout = QVBoxLayout()
+form_layout.addWidget(myToolbar)
+form_layout.addWidget(myTable)
+
+form.setLayout(form_layout)
+
+
+form.show()
+app.exec_()

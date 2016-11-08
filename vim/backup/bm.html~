@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Page!</title>
+        <link rel="stylesheet" href="./bm.css">
+    </head>
+    <body>
+        <div id="search_div">
+            <a href="http://www.google.co.uk">
+                <img src=images/google-logo.png height=95px width=269px>
+            </a>
+            <form method="get" action="http://www.google.com/search">
+                <input type="search"
+                       name="q"
+                       size="50"
+                       style="color:#808080;"
+                       maxlength="255"
+                       value="Google search"
+                       autofocus
+                       onfocus="
+                       if (this.value == this.defaultValue) this.value = '';
+                       this.style.color = 'black';"
+                       onblur = "
+                       if (this.value == '') this.value = this.defaultValue;
+                       this.style.color = '#808080';">
+                <br><br>
+                <input type="submit" value="Google Search">
+            </form>
+
+            <ul id="google_app_list">
+                <li><a href="https://gmail.com">Gmail</a><a href="#"><img src="images/window-16.png"></a></li>
+                <li><a href="https://plus.google.com">Google+</a></li>
+                <li><a href="https://drive.google.com">Google Drive</a></li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="bookmark">
+            <img src="images/bookmark-256.png">
+            <h2>News &nbsp </h2>
+            <ul>
+                <li><a href="http://www.bbc.co.uk">BBC</a></li>
+                <li><a href="http://news.sky.com">Sky</a></li>
+                <li><a href="http://www.slashdot.org">Slashdot</a></li>
+            </ul>
+        </div>
+
+        <div class="bookmark">
+            <img src="images/bookmark-256.png">
+            <h2>Outdoors</h2>
+            <ul>
+                <li><a href="http://www.walkhighlands.co.uk">Walkhighlands</a></li>
+                <li><a href="http://www.scottishhills.com/html/index.php">Scottish Hills</a></li>
+                <li><a href="http://www.metoffice.gov.uk">MET Office</a></li>
+                <li><a href="http://www.mwis.org.uk/scottish-forecast">MWIS</a></li>
+            </ul>
+        </div>
+
+        <div class="bookmark">
+            <img src="images/bookmark-256.png">
+            <h2>Tech</h2>
+            <ul>
+                <li><a href="https://www.archlinux.org/">Arch Linux</a></li>
+                <li><a href="https://www.raspberrypi.org/">Raspberry Pi</a></li>
+            </ul>
+        </div>
+
+        <div class="bookmark">
+            <img src="images/bookmark-256.png">
+            <h2>Downloads</h2>
+            <ul>
+                <li><a href="http://kickass.to.prx.websiteproxy.co.uk">Kickass Torrents</a></li>
+                <li><a href="http://nzbplanet.net/">NZB Planet</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

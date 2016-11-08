@@ -1,0 +1,17 @@
+/* power.cpp */
+
+// Include the headerfile which contains the functions declaration
+// Unlike with iostream and cstdlib we have to include the extension
+// and use " " instead < >
+#include "power.h"
+
+// We don't need the extern here
+int power(int a, unsigned int b)
+{
+    int prod = 1;
+    for(unsigned int i=0; i<v; ++i)
+    {
+        prod *= a;
+    }
+    return prod;
+}

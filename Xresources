@@ -26,13 +26,15 @@ URxvt.keysym.Control-Left:	\033[1;5D
 URxvt.keysym.Control-Right:	\033[1;5C
 
 ! -- uRxvt Font -- !
-URxvt.font: xft:monaco:size=10
+! URxvt.font: xft:Source Code Pro Medium:size=10,xft:Source Code Pro Medium for Powerline:size=10
+URxvt.font: xft:Liberation Mono for Powerline:Regular:size=10
+! URxvt.font: xft:monaco:size=10
 ! URxvt.boldFont: xft:monaco:bold:size=10
 URxvt*fading:  0
 
 ! -- XTerm Font -- !
 XTerm*faceName: monaco:minspace=true:hinting=true:rgba=none
-XTerm*faceSize: 10
+XTerm*faceSize: 16
 XTerm*scaleHeight: 1.01
 
 ! -- Colors, match all terminals (urxvt & xterm) -- !
@@ -58,3 +60,4 @@ XTerm*scaleHeight: 1.01
 ! Blue
 *color4: #87afff
 *color12: #3b7cff
+

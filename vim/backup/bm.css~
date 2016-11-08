@@ -1,0 +1,56 @@
+a {
+    color: blue;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+body {
+    background-color: White;
+}
+
+#search_div {
+    width: 100%;
+    text-align: center;
+}
+
+#google_app_list li
+{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+.bookmark {
+    float: left;
+    width: 25%;
+}
+
+.bookmark img {
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 36px;
+    height: 36px;
+}
+
+.bookmark h2 {
+    display:inline-block;
+    vertical-align: middle;
+    line-height: 36px;
+    color: blue;
+    margin: 0;
+}

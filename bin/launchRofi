@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# android_notification.theme
+#rofi -combi-modi window,drun -show combi \
+#    -opacity 95 \
+#    -color-window "#273238,#273237, #1e2529" \
+#    -color-normal "#273238, #c1c1c1, #273238, #394249, #fffff" \
+#    -color-active "#273238, #80cbc4, #273238, #394249, #80cbc4" \
+#    -color-urgent "#273238, #ff1844, #273238, #394249, #ff1844"
+
+# glue_pro_blue.theme
+# rofi -combi-modi window,drun,run -show combi \
+#    -opacity 90 \
+#    -color-enabled true \
+#    -color-window "#393939, #393939, #268bd2" \
+#    -color-normal "#393939, #ffffff, #393939, #268bd2, #ffffff" \
+#    -color-active "#393939, #268bd2, #393939, #268bd2, #205171" \
+#    -color-urgent "#393939, #f3843d, #393939, #268bd2, #ffc39c"
+
+# gruvbox-dark.theme
+rofi -combi-modi window,drun,run -show combi \
+    -opacity 90 \
+    -color-enabled true \
+    -color-window "#282828, #a89984, #a89984" \
+    -color-normal "#282828, #ebdbb2, #32302f, #665c54, #fbf1c7" \
+    -color-active "#d79921, #282828, #d79921, #fabd2f, #282828" \
+    -color-urgent "#cc241d, #282828, #cc241d, #fb4934, #282828"

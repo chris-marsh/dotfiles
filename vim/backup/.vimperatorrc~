@@ -1,0 +1,24 @@
+"3.10.1 (created: 2015/08/25 00:41:59)
+
+map h :back<Return>
+map l :forward<Return>
+map <BS> :back<Return>
+noremap j 6j
+noremap k 6k
+
+" Normal Mode Mappings
+nnoremap <C-f> /
+" nnoremap <C-c> <C-v><C-c>
+" nnoremap <C-v> <C-v><C-v>
+" nnoremap <C-x> <C-v><C-x>
+nnoremap <C-a> <Ins><C-a><Ins>
+
+" Insert Mode Mappings
+" inoremap <C-c> <C-v><C-c>
+" inoremap <C-v> <C-v><C-v>
+" inoremap <C-x> <C-v><C-x>
+inoremap <C-a> <Ins><C-a><Ins>
+
+source! .vimperatorrc.local
+
+" vim: set ft=vimperator:

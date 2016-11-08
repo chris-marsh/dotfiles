@@ -1,0 +1,11 @@
+/* main.cpp */
+
+#include <iostream>
+#include "power.h"
+
+int main()
+{
+    std::cout << "3^10 = " << pow(3, 10) << std::endl;
+
+    return(0);
+}

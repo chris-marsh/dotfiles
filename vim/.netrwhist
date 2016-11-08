@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/chris-arch/Dev/pyqt/qirc/.ropeproject'
-let g:netrw_dirhist_2='/home/chris-arch/Apps'
-let g:netrw_dirhist_3='/home/chris-arch'
-let g:netrw_dirhist_4='/home/chris-arch/Apps'
-let g:netrw_dirhist_5='/home/chris-arch'
-let g:netrw_dirhist_6='/home/chris-arch/Dev/pyqt/qirc'

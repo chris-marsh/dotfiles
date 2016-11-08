@@ -1,0 +1,63 @@
+#!/bin/bash
+#
+# Chris Marsh 2016
+# Written for compatibility. Tested on Bash and BusyBox.
+#
+# -----------------------------------------------------------------------------
+# Takes an argument list and expand any group short arguments into seperate
+# options. 
+# Usage:  eval "set -- $(split_opts "$@")"
+#         eval "set -- $(split_opts "-lotr -file /some/file.txt)"
+# The first example passes the cli argument list which returns a split version.
+# The second example would return '-l' '-o' '-t' '-r' '-f' '/some/file.txt'
+split_opts() {
+    local args=""
+        for arg in "$@"; do
+            if [ "${#arg}" -gt 1 ] && [ "${arg:0:1}" = "-" ]; then
+                if [ "${arg:1:1}" = "-" ]; then
+                    args="$args '$arg'";
+                else
+                    for i in $(seq 1 ${#arg}); do
+                        opt=${arg:$i:1}
+    if [ ${#opt} -gt 0 ]; then
+        args="$args '-$opt'";
+    fi
+        done;
+    fi
+    else
+        args="$args '$arg'";
+    fi
+        done
+        echo $args
+}
+
+eval "set -- $(split_opts "$@")"
+while [[ $1 ]]; do
+case "$1" in
+'-l'|'--lord')
+echo "'lord' (-l) was selected"
+;;
+'-o'|'--of')
+echo "'of' (-o) was selected"
+;;
+'-t'|'--the')
+echo "'The' (-t) was selected"
+;;
+'-r'|'--rings')
+echo "'Rings' (-r) was selected"
+;;
+'-f'|'--file')
+file=$2
+shift
+echo "'File' (-f) was selected and was ... $file"
+;;
+-*)
+echo "Option '$1' is not valid.\nTry '$0 --help for more information."
+;;
+*)
+echo "Extra option was used. This may be intended or an error: $1"
+;;
+esac
+shift
+done
+
