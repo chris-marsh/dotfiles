@@ -5,19 +5,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'git://github.com/scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline.git'
-Plugin 'https://github.com/edkolev/tmuxline.vim.git'
-Plugin 'https://github.com/vim-airline/vim-airline-themes.git'
+Plugin 'edkolev/tmuxline.vim.git'
+Plugin 'vim-airline/vim-airline-themes.git'
 call vundle#end()
 
 filetype plugin indent on
 
 " Hide the toolbar on Gvim
 set guioptions-=T
-
+set shell=/bin/bash
 set hidden
 set nowrap
 set tabstop=4
@@ -40,15 +40,14 @@ set undolevels=1000
 set wildmenu
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
 set title
-" set ruler
+set ruler
 set novisualbell
 set noerrorbells
 set lazyredraw
 set laststatus=2
 " set cursorline
 " set colorcolumn=85
-
-syntax on
+set background=dark
 
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
@@ -57,6 +56,11 @@ set undodir=~/.vim/undo//
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 set swapfile backup undofile
+
+syntax on
+colorscheme gruvbox
+hi Normal ctermbg=none
+let c_no_curly_error=1
 
 " Map Ctrl+arrow keys to navigate windows
 " nnoremap <silent> <Esc>[1;5D <C-w>h
