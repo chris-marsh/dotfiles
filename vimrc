@@ -28,6 +28,7 @@ set backspace=indent,eol,start
 set autoindent
 set copyindent
 set number
+set relativenumber
 set shiftround
 set showmatch
 set ignorecase
@@ -83,8 +84,14 @@ nnoremap <silent> <PageDown> <C-D><C-D>
 vnoremap <silent> <PageDown> <C-D><C-D>
 inoremap <silent> <PageDown> <C-\><C-O><C-D><C-\><C-O><C-D>
 
-" Remap F1 to toggle NerdTree
+" F1 to Toggle NerdTree
 nmap <silent> <F1> :NERDTreeToggle<CR>
+
+" F2 to toggle paste mode
+nnoremap <silent> <F2> :set paste!<CR>
+
+" F3 to remove all trailing whitespace
+nnoremap <silent> <F3> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 let mapleader=","
 
@@ -106,6 +113,18 @@ nmap <leader>p :bp<CR>
 nmap <leader>f :CtrlP<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 
-" Remove all trailing whitespace by pressing F5
-" nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
-"
+nmap <leader>l :call CycleLineNumbers()<CR>
+
+function! CycleLineNumbers()
+  if (&number == 1 && &relativenumber == 0)
+    set relativenumber
+  else
+    if (&relativenumber == 1 && &number == 1)
+        set norelativenumber
+        set nonumber
+    else
+        set number
+        set norelativenumber
+    endif
+  endif
+endfunc
