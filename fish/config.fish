@@ -1,8 +1,9 @@
 # Fish settings
-set -gx  LC_ALL en_GB.UTF-8  
-set -gx  LANG en_GB.UTF-8  
+set -gx LC_ALL en_GB.UTF-8  
+set -gx LANG en_GB.UTF-8  
 set -gx fish_user_paths $fish_user_paths ~/bin
 set -gx EDITOR vim
+set -gx SXHKD_SHELL /bin/sh
 
 if [ $TERM = "xterm" ]
     set -gx TERM xterm-256color

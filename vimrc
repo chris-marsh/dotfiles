@@ -8,12 +8,14 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'bling/vim-airline.git'
+Plugin 'itchyny/lightline.vim'
 Plugin 'edkolev/tmuxline.vim.git'
-Plugin 'vim-airline/vim-airline-themes.git'
+Plugin 'valloric/YouCompleteMe'
+Plugin 'tpope/vim-commentary'
 call vundle#end()
 
 filetype plugin indent on
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 " Hide the toolbar on Gvim
 set guioptions-=T
@@ -49,9 +51,7 @@ set laststatus=2
 " set cursorline
 " set colorcolumn=85
 set background=dark
-
 set encoding=utf-8
-let g:airline_powerline_fonts = 1
 
 set undodir=~/.vim/undo//
 set backupdir=~/.vim/backup//
@@ -63,11 +63,24 @@ colorscheme gruvbox
 hi Normal ctermbg=none
 let c_no_curly_error=1
 
-" Map Ctrl+arrow keys to navigate windows
-" nnoremap <silent> <Esc>[1;5D <C-w>h
-" nnoremap <silent> <Esc>[1;5B <C-w>j
-" nnoremap <silent> <Esc>[1;5A <C-w>k
-" nnoremap <silent> <Esc>[1;5C <C-w>l
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+
+let g:ctrlp_max_height = 30
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " Map Ctrl+[hjkl] to navigate windows vim style
 nnoremap <silent> <C-h> <C-w>h
@@ -84,6 +97,12 @@ nnoremap <silent> <PageDown> <C-D><C-D>
 vnoremap <silent> <PageDown> <C-D><C-D>
 inoremap <silent> <PageDown> <C-\><C-O><C-D><C-\><C-O><C-D>
 
+" Increase/descrease window split size
+if bufwinnr(1)
+	map + <C-W>+
+	map - <C-W>-
+endif
+
 " F1 to Toggle NerdTree
 nmap <silent> <F1> :NERDTreeToggle<CR>
 
@@ -98,8 +117,11 @@ let mapleader=","
 " Quick save the current file
 nmap <leader>w :w<CR>
 
+" Insert empty line below
+nmap <silent> <leader><CR> o<ESC>
+
 " Clear search highlights
-nmap <silent> <leader><CR> :noh<CR>
+nmap <silent> <leader><space> :noh<CR>
 
 " Close buffer without affecting splits
 command! Bd bp\|bd \#
@@ -112,7 +134,12 @@ nmap <leader>p :bp<CR>
 " CtrlP shorctuts
 nmap <leader>f :CtrlP<CR>
 nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>m :CtrlPMRU<CR>
 
+" Load vimrc
+nmap <leader>v :e ~/.vimrc<CR>
+
+" Toggle/cycle line number modes
 nmap <leader>l :call CycleLineNumbers()<CR>
 
 function! CycleLineNumbers()
