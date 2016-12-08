@@ -24,190 +24,10 @@ q0
 v2
 ov
 m-1
-l10,2
+l12
 r12
 
 # Left window history (oldest to newest):
-d/home/chris/Documents/web/assets
-	close.svg
-1
-d/home/chris/Documents/web
-	web.html
-14
-d/home/chris/Documents
-	web/
-1
-d/home/chris
-	Documents/
-3
-d/home
-	chris/
-1
-d/
-	tmp/
-17
-d/tmp
-	google_web_designer_temp_files/
-1
-d/tmp/google_web_designer_temp_files
-	344830258_1430946582553216/
-1
-d/tmp/google_web_designer_temp_files/344830258_1430946582553216
-	gwd-preview/
-1
-d/tmp/google_web_designer_temp_files/344830258_1430946582553216/gwd-preview
-	index.html
-12
-d/tmp/google_web_designer_temp_files/344830258_1430946582553216
-	gwd-preview/
-1
-d/tmp/google_web_designer_temp_files
-	
-1
-d/tmp
-	systemd-private-a12ef482a5544455ab1538d30dedd21b-colord.service-Yg1Frc/
-1
-d/
-	home/
-4
-d/home
-	chris/
-1
-d/home/chris
-	Downloads/
-6
-d/home/chris/Downloads
-	python-daemon-2.0.5/
-3
-d/home/chris
-	media/
-8
-d/home/chris/media
-	../
-0
-d/home/chris
-	media/
-8
-d/home
-	Media/
-3
-d/home/Media
-	Movies/
-1
-d/home/Media/Movies
-	../
-0
-d/home/Media
-	Movies/
-1
-d/home
-	Media/
-3
-d/home/Media
-	Movies/
-1
-d/home
-	Media/
-3
-d/
-	media/
-8
-d/media
-	../
-0
-d/
-	home/
-4
-d/home
-	chris/
-1
-d/home/chris
-	Phone Backup/
-10
-d/home/chris/Phone Backup
-	DCIM/
-1
-d/home/chris/Phone Backup/DCIM
-	100ANDRO/
-1
-d/home/chris/Phone Backup/DCIM/100ANDRO
-	DSC_0002.JPG
-1
-d/home/chris/Phone Backup/DCIM
-	Camera/
-2
-d/home/chris/Phone Backup/DCIM/Camera
-	../
-0
-d/home/chris/Phone Backup/DCIM
-	XPERIA/
-3
-d/home/chris/Phone Backup/DCIM/XPERIA
-	BACKGROUND_DEFOCUS/
-1
-d/home/chris/Phone Backup/DCIM/XPERIA/BACKGROUND_DEFOCUS
-	../
-0
-d/home/chris/Phone Backup/DCIM/XPERIA
-	BACKGROUND_DEFOCUS/
-1
-d/home/chris/Phone Backup/DCIM
-	100ANDRO/
-1
-d/home/chris/Phone Backup/DCIM/100ANDRO
-	DSC_0055.JPG
-33
-d/home/chris/Phone Backup/DCIM
-	100ANDRO/
-1
-d/home/chris/Phone Backup
-	DCIM/
-1
-d/home/chris
-	.config/
-5
-d/home/chris/.config
-	cinnamon-session/
-3
-d/home/chris/Pictures
-	..
-0
-d/home/chris
-	Pictures
-33
-d/home/chris/Pictures
-	Victoria Bridge Duo
-28
-d/home/chris/Pictures/Victoria Bridge Duo
-	P6143410.JPG
-1
-d/home/chris
-	Pictures
-16
-d/run/user/1000/gvfs/mtp:host=%5Busb%3A003%2C004%5D
-	..
-0
-d/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C003%5D
-	..
-0
-d/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C004%5D
-	..
-0
-d/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C005%5D
-	..
-0
-d/run/media/chris/A104-21B2
-	..
-0
-d/home/chris/Documents
-	..
-0
-d/home/chris
-	Pictures
-16
-d/home/chris/Pictures
-	..
-0
 d/home/chris
 	.eric6
 14
@@ -326,50 +146,191 @@ d/home/chris/usr/share/man/man1
 	hmac256.1.gz
 1
 d/home/chris
-	Pictures
+	Public
+5
+d/home
+	chris
+4
+d/
+	.config
+4
+d/.config
+	..
+0
+d/
+	.config
+4
+d/.config
+	..
+0
+d/
+	mnt
+5
+d/mnt
+	..
+0
+d/
+	.config
+4
+d/.config
+	kdebugrc
+1
+d/
+	home
+2
+d/home
+	chris
+4
+d/home/chris
+	Public
+5
+d/home
+	chris
+1
+d/home/chris
+	Public
+24
+d/home
+	chris
+1
+d/
+	.config
+0
+d/.config
+	kdebugrc
+1
+d/
+	var
+22
+d/var
+	..
+0
+d/
+	var
+22
+d/var
+	.updated
+14
+d/
+	home
+4
+d/home
+	chris
+1
+d/home/chris
+	Public
+11
+d/home
+	chris
+1
+d/
+	run
 15
+d/run
+	media
+8
+d/run/media
+	chris
+1
+d/run/media/chris
+	VIDEOS
+1
+d/run/media/chris/VIDEOS
+	The Crown
+1
+d/run/media/chris/VIDEOS/The Crown
+	..
+0
+d/run/media/chris/VIDEOS
+	The Crown
+1
+d/run/media/chris
+	VIDEOS
+1
+d/run/media
+	chris
+1
+d/run
+	media
+8
+d/run/media
+	chris
+1
+d/run/media/chris
+	VIDEOS
+1
+d/run/media/chris/VIDEOS
+	The Crown
+1
+d/run/media/chris/VIDEOS/The Crown
+	The Crown - S01E10 - Gloriana.mp4
+3
+d/run/media/chris/VIDEOS
+	test
+1
+d/run/media/chris/VIDEOS/test
+	..
+0
+d/run/media/chris/VIDEOS
+	test
+1
+d/run/media/chris/VIDEOS/test
+	..
+0
+d/run/media/chris/VIDEOS
+	test
+1
+d/run/media/chris
+	..
+0
+d/run/media
+	chris
+1
+d/run
+	media
+8
+d/run/media
+	chris
+1
+d/run/media/chris
+	VIDEOS
+1
+d/run/media/chris/VIDEOS
+	test
+1
+d/run/media/chris/VIDEOS/test
+	..
+0
+d/run/media/chris/VIDEOS
+	test
+1
+d/run/media/chris/VIDEOS/test
+	..
+0
+d/run/media/chris/VIDEOS
+	The Crown
+1
+d/run/media/chris
+	VIDEOS
+1
+d/run/media
+	chris
+1
+d/run
+	media
+8
+d/
+	home
+4
+d/home
+	chris
+1
+d/home/chris
+	Public
+11
 d
 
 # Right window history (oldest to newest):
-D/home/chris/media
-	../
-0
-D/home/chris
-	media/
-7
-D/home
-	chris/
-1
-D/home/chris
-	Pictures/
-9
-D/home/chris/Pictures
-	Auchnafree/
-1
-D/home/chris/Pictures/Auchnafree
-	../
-0
-D/home/chris/Pictures
-	Chapelgill/
-5
-D/home/chris/Pictures/Chapelgill
-	../
-0
-D/home/chris/Pictures
-	Auchnafree/
-1
-D/home/chris/Pictures/Auchnafree
-	P3142656.JPG
-1
-D/home/chris/Pictures
-	Chapelgill/
-5
-D/home/chris/Pictures/Chapelgill
-	P3152673.JPG
-1
-D/home/chris/Pictures
-	Chapelgill/
-5
 D/home/chris
 	.i3/
 15
@@ -629,8 +590,47 @@ D/home
 	chris
 1
 D/home/chris
-	Documents
-4
+	Pictures
+9
+D/home/chris/Pictures
+	Wallpapers
+57
+D/home/chris/Pictures/Wallpapers
+	Horror
+1
+D/home/chris/Pictures/Wallpapers/Horror
+	824345-grim-reaper.jpg
+1
+D/home/chris/Pictures/Wallpapers
+	Horror
+1
+D/home/chris/Pictures/Wallpapers/Horror
+	824345-grim-reaper.jpg
+1
+D/home/chris/Pictures/Wallpapers
+	Horror
+1
+D/home/chris/Pictures
+	Wallpapers
+57
+D/home/chris
+	Pictures
+9
+D/home/chris/Pictures
+	Wallpapers
+25
+D/home/chris
+	Projects
+10
+D/home/chris/Projects
+	evilvte
+10
+D/home/chris/Projects/evilvte
+	src
+2
+D/home/chris/Projects/evilvte/src
+	..
+0
 D
 
 # Command line history (oldest to newest):
@@ -678,6 +678,14 @@ D
 :mkdir Cairnsmore of Fleet
 :rmdir Cairnsmore
 :mkdir "Cairnsmore of Fleet"
+:help
+:sort
+:mkdir test2
+:set shell=/bin/bash
+:mkdir test3
+:wq
+:mkdir test
+:rmdir test
 :q
 
 # Search history (oldest to newest):
@@ -716,7 +724,7 @@ pWyrmwood
 |.zip
 
 # Registers:
-""/home/chris/.vifm/Trash/000_P3054562.JPG
+""/run/media/chris/VIDEOS/.vifm-Trash-1000/001_test
 
 # Directory stack (oldest to newest):
 
@@ -729,6 +737,16 @@ t/home/chris/.vifm/Trash/000_of
 	/home/chris/Pictures/of
 t/home/chris/.vifm/Trash/000_P3054562.JPG
 	/home/chris/Pictures/Cairnsmore of Fleet/P3054562.JPG
+t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_test3
+	/run/media/chris/VIDEOS/test3
+t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_test
+	/run/media/chris/VIDEOS/test
+t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_test2
+	/run/media/chris/VIDEOS/test2
+t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_824345-grim-reaper.jpg
+	/run/media/chris/VIDEOS/test/824345-grim-reaper.jpg
+t/run/media/chris/VIDEOS/.vifm-Trash-1000/001_test
+	/run/media/chris/VIDEOS/test
 
 # State:
 f

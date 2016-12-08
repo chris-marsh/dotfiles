@@ -11,8 +11,6 @@ URxvt*urgentOnBell: false
 URxvt*iso14755: False
 URxvt.transparent:   true
 URxvt.shading:       20
-! URxvt.depth: 32
-! URxvt.background: rgba:0000/0000/0200/c800
 
 ! -- Click URLs -- !
 URxvt.perl-ext-common: default,matcher
@@ -26,38 +24,34 @@ URxvt.keysym.Control-Left:	\033[1;5D
 URxvt.keysym.Control-Right:	\033[1;5C
 
 ! -- uRxvt Font -- !
-! URxvt.font: xft:Source Code Pro Medium:size=10,xft:Source Code Pro Medium for Powerline:size=10
 URxvt.font: xft:Liberation Mono for Powerline:Regular:size=10
-! URxvt.font: xft:monaco:size=10
-! URxvt.boldFont: xft:monaco:bold:size=10
-URxvt*fading:  0
+URxvt.boldfont: xft:Liberation Mono for Powerline:Regular:size=10
+URxvt.fading:  0
+URxvt.letterSpace: -1
 
 ! -- XTerm Font -- !
-XTerm*faceName: monaco:minspace=true:hinting=true:rgba=none
-XTerm*faceSize: 16
+XTerm*faceName: Liberation Mono for Powerline:minspace=true:hinting=true:rgba=none
+XTerm*faceSize: 10
 XTerm*scaleHeight: 1.01
-
+Xterm*transparent: true
 ! -- Colors, match all terminals (urxvt & xterm) -- !
-*background: #262626
-*foreground: #e4e4e4
 
-! Black
-*color0: #000000
-*color8: #808080
-
-! Red
-*color1: #d75f87
-*color9: red
-
-! Green
-*color2: #87d787
-*color10: green
-
-! Yellow
-*color3: #d7d787
-*color11: yellow
-
-! Blue
-*color4: #87afff
-*color12: #3b7cff
-
+*.foreground: #DEDACF
+*.background: #171717
+*.cursorColor: #FF0000
+*.color0: #000000
+*.color1: #FF615A
+*.color2: #B1E969
+*.color3: #EBD99C
+*.color4: #5DA9F6
+*.color5: #E86AFF
+*.color6: #82FFF7
+*.color7: #DEDACF
+*.color8: #313131
+*.color9: #F58C80
+*.color10: #DDF88F
+*.color11: #EEE5B2
+*.color12: #A5C7FF
+*.color13: #DDAAFF
+*.color14: #B7FFF9
+*.color15: #FFFFFF

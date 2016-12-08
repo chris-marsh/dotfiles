@@ -17,8 +17,6 @@ call vundle#end()
 filetype plugin indent on
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
-" Hide the toolbar on Gvim
-set guioptions-=T
 set shell=/bin/bash
 set hidden
 set nowrap
@@ -48,11 +46,11 @@ set novisualbell
 set noerrorbells
 set lazyredraw
 set laststatus=2
-" set cursorline
+set cursorline
 " set colorcolumn=85
+set guioptions-=T   " Hide the toolbar on Gvim
 set background=dark
 set encoding=utf-8
-
 set undodir=~/.vim/undo//
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//

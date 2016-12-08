@@ -22,7 +22,7 @@ bspc rule -a albert focus=on state=floating border=off
 xsetroot -cursor_name left_ptr &
 compton &
 dunst -config /home/chris/.i3/dunst.conf &
-feh --bg-scale ~/Pictures/Wallpapers/wp2.jpg &
+feh --bg-scale ~/Pictures/Wallpapers/Horror/the_dark_ages_by_jonasdero-d55wvrb.jpg &
 xfce4-power-manager &
 udiskie --tray &
 nm-applet &
