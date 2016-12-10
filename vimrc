@@ -18,15 +18,15 @@ filetype plugin indent on
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 set shell=/bin/bash
-set hidden
-set nowrap
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set backspace=indent,eol,start
-set autoindent
-set copyindent
+set hidden          " opening new file hides current instead of closing
+set nowrap          " switch off line wrapping
+set tabstop=4       " Set tabs to 4 characaters wide
+set shiftwidth=4    " Set indentation width to match tab
+set expandtab       " Use spaces instead of actual hard tabs
+set softtabstop=4   " Set the soft tab to match the hard tab width
+set backspace=indent,eol,start  " Make bs work across line breaks etc
+set autoindent      " Enable basic auto indentation
+set copyindent      " Preserve manual indentation
 set number
 set relativenumber
 set shiftround
@@ -48,13 +48,15 @@ set lazyredraw
 set laststatus=2
 set cursorline
 " set colorcolumn=85
-set guioptions-=T   " Hide the toolbar on Gvim
+set guioptions-=T       " Hide the toolbar on Gvim
 set background=dark
 set encoding=utf-8
 set undodir=~/.vim/undo//
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 set swapfile backup undofile
+
+set clipboard=unnamed   " Use system clipboard, bonus copy/paste between local & SSH
 
 syntax on
 colorscheme gruvbox

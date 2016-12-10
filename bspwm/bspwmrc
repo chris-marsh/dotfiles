@@ -17,7 +17,6 @@ bspc monitor -d Term Web Dev SSH
 bspc rule -a Gimp desktop=^4 follow=on
 bspc rule -a Firefox desktop=^2 follow=on border=off
 bspc rule -a Lxappearance state=floating center=true
-bspc rule -a albert focus=on state=floating border=off
 
 xsetroot -cursor_name left_ptr &
 compton &

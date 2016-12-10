@@ -28,6 +28,24 @@ l12
 r12
 
 # Left window history (oldest to newest):
+d/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C004%5D
+	..
+0
+d/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C005%5D
+	..
+0
+d/run/media/chris/A104-21B2
+	..
+0
+d/home/chris/Documents
+	..
+0
+d/home/chris
+	Pictures
+16
+d/home/chris/Pictures
+	..
+0
 d/home/chris
 	.eric6
 14
@@ -308,29 +326,35 @@ d/run/media/chris/VIDEOS/test
 	..
 0
 d/run/media/chris/VIDEOS
-	The Crown
-1
-d/run/media/chris
-	VIDEOS
-1
-d/run/media
-	chris
-1
-d/run
-	media
-8
-d/
-	home
-4
-d/home
-	chris
-1
-d/home/chris
-	Public
-11
+	..
+0
 d
 
 # Right window history (oldest to newest):
+D/home/chris/Pictures/Auchnafree
+	../
+0
+D/home/chris/Pictures
+	Chapelgill/
+5
+D/home/chris/Pictures/Chapelgill
+	../
+0
+D/home/chris/Pictures
+	Auchnafree/
+1
+D/home/chris/Pictures/Auchnafree
+	P3142656.JPG
+1
+D/home/chris/Pictures
+	Chapelgill/
+5
+D/home/chris/Pictures/Chapelgill
+	P3152673.JPG
+1
+D/home/chris/Pictures
+	Chapelgill/
+5
 D/home/chris
 	.i3/
 15
@@ -607,30 +631,6 @@ D/home/chris/Pictures/Wallpapers
 D/home/chris/Pictures/Wallpapers/Horror
 	824345-grim-reaper.jpg
 1
-D/home/chris/Pictures/Wallpapers
-	Horror
-1
-D/home/chris/Pictures
-	Wallpapers
-57
-D/home/chris
-	Pictures
-9
-D/home/chris/Pictures
-	Wallpapers
-25
-D/home/chris
-	Projects
-10
-D/home/chris/Projects
-	evilvte
-10
-D/home/chris/Projects/evilvte
-	src
-2
-D/home/chris/Projects/evilvte/src
-	..
-0
 D
 
 # Command line history (oldest to newest):
