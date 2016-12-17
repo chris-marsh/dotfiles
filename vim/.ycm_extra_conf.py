@@ -1,5 +1,6 @@
 # Partially stolen from https://bitbucket.org/mblum/libgp/src/2537ea7329ef/.ycm_extra_conf.py
 import os
+import subprocess
 import ycm_core
 
 # These are the compilation flags that will be used in case there's no
@@ -32,7 +33,10 @@ flags = [
     # '-isystem', '/usr/local/include/eigen3',
     '-I', 'include',
     '-I.',
+    '-I', '/usr/include/gtk-3.0',
 ]
+flags += [s.strip() for s in str(subprocess.check_output(['pkg-config', '--cflags', '--libs', 'gtk+-3.0'])).strip().split(' ')]
+
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for

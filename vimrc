@@ -12,10 +12,17 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'edkolev/tmuxline.vim.git'
 Plugin 'valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'SirVer/ultisnips.git'
+Plugin 'honza/vim-snippets'
 call vundle#end()
 
 filetype plugin indent on
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+"" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-c>"
+let g:UltiSnipsListSnippets="<c-s-tab>"
 
 set shell=/bin/bash
 set hidden          " opening new file hides current instead of closing
