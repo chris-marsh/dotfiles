@@ -93,7 +93,7 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {Left,Down,Up,Dight}
+super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
