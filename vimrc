@@ -68,7 +68,6 @@ set clipboard=unnamed   " Use system clipboard, bonus copy/paste between local &
 syntax on
 colorscheme gruvbox
 hi Normal ctermbg=none
-let c_no_curly_error=1
 
 set noshowmode
 let g:lightline = {
@@ -94,6 +93,12 @@ nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
+
+" Map Ctrl+[arrow] to navigate windows vim style
+nnoremap <silent> <C-Left> <C-w>h
+nnoremap <silent> <C-Down> <C-w>j
+nnoremap <silent> <C-Up> <C-w>k
+nnoremap <silent> <C-Right> <C-w>l
 
 " Remap page keys to change default behaviour - make the same as half-page scroll
 nnoremap <silent> <PageUp> <C-U><C-U>
