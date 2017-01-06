@@ -136,8 +136,8 @@ nmap <silent> <leader><CR> o<ESC>
 nmap <silent> <leader><space> :noh<CR>
 
 " Close buffer without affecting splits
-command! Bd bp\|bd \#
-nmap <leader>d :Bd<CR>
+nmap <leader>d :bprevious<CR>:bdelete #<CR>
+
 
 " Easy buffer navigation
 nmap <leader>n :bn<CR>
@@ -167,3 +167,4 @@ function! CycleLineNumbers()
     endif
   endif
 endfunc
+

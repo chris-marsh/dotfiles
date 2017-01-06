@@ -1,6 +1,11 @@
 #
 # wm independent hotkeys
 #
+super + z
+    scratchtog
+
+super + shift + z
+    scratch
 
 # terminal emulator
 super + Return
