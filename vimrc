@@ -62,7 +62,6 @@ set undodir=~/.vim/undo//
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 set swapfile backup undofile
-
 set clipboard=unnamed   " Use system clipboard, bonus copy/paste between local & SSH
 
 syntax on
@@ -135,9 +134,11 @@ nmap <silent> <leader><CR> o<ESC>
 " Clear search highlights
 nmap <silent> <leader><space> :noh<CR>
 
+" Rotate window splits
+nmap <leader>r <C-w>r
+
 " Close buffer without affecting splits
 nmap <leader>d :bprevious<CR>:bdelete #<CR>
-
 
 " Easy buffer navigation
 nmap <leader>n :bn<CR>
