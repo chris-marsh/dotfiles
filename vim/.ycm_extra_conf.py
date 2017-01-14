@@ -1,6 +1,6 @@
-# Partially stolen from https://bitbucket.org/mblum/libgp/src/2537ea7329ef/.ycm_extra_conf.py
+zz# Partially stolen from https://bitbucket.org/mblum/libgp/src/2537ea7329ef/.ycm_extra_conf.py
 import os
-import subprocess
+zzimport subprocess
 import ycm_core
 
 # These are the compilation flags that will be used in case there's no
@@ -27,12 +27,10 @@ flags = [
     # For a C project, you would set this to 'c' instead of 'c++'.
     # '-x', 'c++',
     '-x', 'c',
-    # This path will only work on OS X, but extra paths that don't exist are not
-    # harmful
-    # '-isystem', '/usr/local/include',
-    # '-isystem', '/usr/local/include/eigen3',
-    '-I', 'include',
-    '-I.',
+    # common include directories for projects
+    '-I', './',
+    '-I', './include',
+    '-I', '../include',
 ]
 
 # flags += [s.strip() for s in str(subprocess.check_output(['pkg-config', '--cflags', '--libs', 'gtk+-3.0'])).strip().split(' ')]

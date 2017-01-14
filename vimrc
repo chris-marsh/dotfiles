@@ -1,8 +1,11 @@
+" Reset some otions when resourcing .vimrc
 set nocompatible
 filetype off
 
+" add Vundle to to the runtimepath
 set rtp+=~/.vim/bundle/Vundle.vim
 
+" Use vundle to manage/load the plugins
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
@@ -17,67 +20,25 @@ Plugin 'SirVer/ultisnips.git'
 Plugin 'honza/vim-snippets'
 call vundle#end()
 
-filetype plugin indent on
+" Set a default configuration for YoucompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
-"" Ultisnips
+"" Ultisnips Settings
 let g:UltiSnipsExpandTrigger="<c-c>"
 let g:UltiSnipsListSnippets="<c-s-tab>"
 
-set shell=/bin/bash
-set hidden          " opening new file hides current instead of closing
-set nowrap          " switch off line wrapping
-set tabstop=4       " Set tabs to 4 characaters wide
-set shiftwidth=4    " Set indentation width to match tab
-set expandtab       " Use spaces instead of actual hard tabs
-set softtabstop=4   " Set the soft tab to match the hard tab width
-set backspace=indent,eol,start  " Make bs work across line breaks etc
-set autoindent      " Enable basic auto indentation
-set copyindent      " Preserve manual indentation
-set number
-set relativenumber
-set shiftround
-set showmatch
-set ignorecase
-set smartcase
-set smarttab
-set hlsearch
-set incsearch
-set history=1000
-set undolevels=1000
-set wildmenu
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
-set title
-set ruler
-set novisualbell
-set noerrorbells
-set lazyredraw
-set laststatus=2
-set cursorline
-" set colorcolumn=85
-set guioptions-=T       " Hide the toolbar on Gvim
-set background=dark
-set encoding=utf-8
-set undodir=~/.vim/undo//
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
-set swapfile backup undofile
-set clipboard=unnamed   " Use system clipboard, bonus copy/paste between local & SSH
-
-syntax on
-colorscheme gruvbox
-hi Normal ctermbg=none
-
-set noshowmode
+" Lightline settings
+set noshowmode      " Hide vims info and use lightline instead
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
+            \ 'colorscheme': 'wombat',
+            \ 'component': {
+            \   'readonly': '%{&readonly?"":""}',
+            \ },
+            \ 'separator': { 'left': '', 'right': '' },
+            \ 'subseparator': { 'left': '', 'right': '' }
+            \ }
 
+" CtrlP settings
 let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
@@ -87,31 +48,77 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+set shell=/bin/bash
+set backspace=indent,eol,start  " Make bs work across line breaks etc
+set hidden          " opening new file hides current instead of closing
+set nowrap          " switch off line wrapping
+set tabstop=4       " Set tabs to 4 characaters wide
+set shiftwidth=4    " Set indentation width to match tab
+set expandtab       " Use spaces instead of actual hard tabs
+set softtabstop=4   " Set the soft tab to match the hard tab width
+set smarttab        " space according to shiftwidth
+set autoindent      " Enable basic auto indentation
+set copyindent      " Preserve manual indentation
+set number          " Show line number gutter
+set relativenumber  " Make line numbers relative
+set shiftround      " Tabs space to next mutiple of shiftwidth
+set showmatch       " Highlight matching brackets, ie ( { [
+set ignorecase      " Make searches case insensitive
+set smartcase       " Make case sensitive when search includes uppercase
+set hlsearch        " Highlight search matches``
+set incsearch       " Search as you type
+set history=1000    " command line history
+set undolevels=1000 " Undo edits
+set wildmenu        " Tab completion for command mode
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
+set title           " Set the window title
+set ruler           " Show the cursor position
+set novisualbell    " No flashing windows
+set noerrorbells    " Don't disturb me!
+set lazyredraw      " Redraw only when needed
+set laststatus=2    " Always display the status line
+set cursorline      " Highlight the current line
+set confirm         " Don't fail commands on unsaved files
+" set colorcolumn=85
+set guioptions-=T   " Hide the toolbar on Gvim
+set encoding=utf-8  " Vim recommended setting
+set clipboard=unnamed   " Use system clipboard
+set undodir=~/.vim/undo//       " Keep undo away from working files/dirs
+set backupdir=~/.vim/backup//   " Keep backups away from working files
+set directory=~/.vim/swp//      " Keep swp file away from working files
+set swapfile backup undofile    " Set persistent undo etc
+
+filetype plugin indent on   " Use default filetype settings
+syntax on                   " Switch on syntax highlighting
+set background=dark         " Hint to colorscheme a dark background is in use
+colorscheme gruvbox         " Set the color scheme
+hi Normal ctermbg=none  " clear amy scheme background colors to show terminal background
+
 " Map Ctrl+[hjkl] to navigate windows vim style
 nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 
-" Map Ctrl+[arrow] to navigate windows vim style
+" Map Ctrl+[arrow] to navigate windows splits
 nnoremap <silent> <C-Left> <C-w>h
 nnoremap <silent> <C-Down> <C-w>j
 nnoremap <silent> <C-Up> <C-w>k
 nnoremap <silent> <C-Right> <C-w>l
 
-" Remap page keys to change default behaviour - make the same as half-page scroll
-nnoremap <silent> <PageUp> <C-U><C-U>
-vnoremap <silent> <PageUp> <C-U><C-U>
-inoremap <silent> <PageUp> <C-\><C-O><C-U><C-\><C-O><C-U>
+" Page up/down will scroll half-page and center current line on the screen
+nnoremap <silent> <PageUp> <C-U>zz
+vnoremap <silent> <PageUp> <C-U>zz
+inoremap <silent> <PageUp> <C-\><C-O><C-U>zz
 
-nnoremap <silent> <PageDown> <C-D><C-D>
-vnoremap <silent> <PageDown> <C-D><C-D>
-inoremap <silent> <PageDown> <C-\><C-O><C-D><C-\><C-O><C-D>
+nnoremap <silent> <PageDown> <C-D>zz
+vnoremap <silent> <PageDown> <C-D>zz
+inoremap <silent> <PageDown> <C-\><C-O><C-D>zz
 
 " Increase/descrease window split size
 if bufwinnr(1)
-	map + <C-W>+
-	map - <C-W>-
+    map + <C-W>+
+    map - <C-W>-
 endif
 
 " F1 to Toggle NerdTree
@@ -127,6 +134,9 @@ let mapleader=","
 
 " Quick save the current file
 nmap <leader>w :w<CR>
+
+" Reindent the file, keeping the cursor on original line
+nmap <leader>i mzgg=G`z
 
 " Insert empty line below
 nmap <silent> <leader><CR> o<ESC>
@@ -156,16 +166,16 @@ nmap <leader>v :e ~/.vimrc<CR>
 nmap <leader>l :call CycleLineNumbers()<CR>
 
 function! CycleLineNumbers()
-  if (&number == 1 && &relativenumber == 0)
-    set relativenumber
-  else
-    if (&relativenumber == 1 && &number == 1)
-        set norelativenumber
-        set nonumber
+    if (&number == 1 && &relativenumber == 0)
+        set relativenumber
     else
-        set number
-        set norelativenumber
+        if (&relativenumber == 1 && &number == 1)
+            set norelativenumber
+            set nonumber
+        else
+            set number
+            set norelativenumber
+        endif
     endif
-  endif
 endfunc
 
