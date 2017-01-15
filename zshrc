@@ -11,9 +11,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source ~/dotfiles/shell/aliases.sh
+source ~/.dotfiles/shell/aliases.sh
 
-export PATH=$PATH:~/bin:.
+export PATH=$PATH:~/.dotfiles/bin:.
 export EDITOR=vim
 
 if [ "$TERM" = "linux" ]; then
