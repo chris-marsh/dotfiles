@@ -9,7 +9,7 @@ super + shift + z
 
 # terminal emulator
 super + Return
-    evilvte
+	evilvte
 
 #run rofi
 super + space

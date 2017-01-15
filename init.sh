@@ -17,6 +17,8 @@ rm ~/.zshrc
 ln -s $here/zshrc ~/.zshrc
 rm ~/.config/bspwm
 ln -s $here/bspwm ~/.config/bspwm
+rm ~/.config/sxhkd
+ln -s $here/sxhkd ~/.config/sxhkd
 rm ~/.vifm
 ln -s $here/vifm ~/.vifm
 rm ~/.shell

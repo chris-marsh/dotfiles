@@ -27,5 +27,7 @@ xfce4-power-manager &
 udiskie --tray &
 nm-applet &
 volumeicon &
+evilvte &
+# sleep 1; ~/Projects/polybar/build/bin/polybar example &
 sleep 1; tint2 &
 sleep 1; xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -n tint2) &
