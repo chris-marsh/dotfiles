@@ -28,102 +28,6 @@ l12
 r12
 
 # Left window history (oldest to newest):
-d/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C004%5D
-	..
-0
-d/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C005%5D
-	..
-0
-d/run/media/chris/A104-21B2
-	..
-0
-d/home/chris/Documents
-	..
-0
-d/home/chris
-	Pictures
-16
-d/home/chris/Pictures
-	..
-0
-d/home/chris
-	.eric6
-14
-d/home
-	chris
-1
-d/home/chris
-	.designer
-11
-d/home/chris/.designer
-	..
-0
-d/home/chris
-	Downloads
-5
-d/home/chris/Downloads
-	Downton.Abbey.S03.Season.3.w.Special.DVDRip.XviD-HAGGiS
-11
-d/home/chris/Downloads/Downton.Abbey.S03.Season.3.w.Special.DVDRip.XviD-HAGGiS
-	..
-0
-d/home/chris/Downloads
-	python-daemon-2.0.5
-1
-d/home/chris/Downloads/python-daemon-2.0.5
-	..
-0
-d/home/chris/Downloads
-	..
-0
-d/home/chris
-	..
-0
-d/home
-	chris
-4
-d/home/chris
-	bin
-2
-d/home/chris/bin
-	..
-0
-d/home/chris
-	Pictures
-14
-d/home/chris/Pictures
-	Kings Seat
-43
-d/home/chris/Pictures/Kings Seat
-	P3054562.JPG
-1
-d/home/chris/Pictures
-	Cairnsmore of Fleet
-44
-d/home/chris/Pictures/Cairnsmore of Fleet
-	..
-0
-d/home/chris/Pictures
-	Cairnsmore of Fleet
-44
-d/home/chris
-	usr
-10
-d/home/chris/usr
-	..
-0
-d/home/chris
-	usr
-10
-d/home/chris/usr
-	share
-1
-d/home/chris/usr/share
-	..
-0
-d/home/chris/usr
-	bin
-2
 d/home/chris/usr/bin
 	..
 0
@@ -328,18 +232,105 @@ d/run/media/chris/VIDEOS/test
 d/run/media/chris/VIDEOS
 	..
 0
+d/run
+	NetworkManager
+9
+d/run/NetworkManager
+	..
+0
+d/run
+	sudo
+14
+d/
+	mnt
+10
+d/mnt
+	..
+0
+d/
+	mnt
+10
+d/mnt
+	..
+0
+d/
+	media
+9
+d/media
+	..
+0
+d/
+	run
+14
+d/run
+	mount
+8
+d/run/mount
+	..
+0
+d/run
+	NetworkManager
+9
+d/run/NetworkManager
+	..
+0
+d/run
+	samba
+13
+d/run/samba
+	..
+0
+d/run
+	sudo
+14
+d/run/sudo
+	..
+0
+d/run
+	user
+19
+d/run/user
+	1000
+1
+d/run/user/1000
+	qutebrowser
+5
+d/run/user/1000/qutebrowser
+	..
+0
+d/run/user/1000
+	systemd
+6
+d/run/user/1000/systemd
+	..
+0
+d/run/user/1000
+	pulse
+4
+d/run/user/1000/pulse
+	..
+0
+d/run/user/1000
+	pulse
+4
+d/run/user
+	1000
+1
+d/run
+	user
+19
+d/
+	home
+4
+d/home
+	chris
+1
+d/home/chris
+	Public
+9
 d
 
 # Right window history (oldest to newest):
-D/home/chris/Pictures/Auchnafree
-	../
-0
-D/home/chris/Pictures
-	Chapelgill/
-5
-D/home/chris/Pictures/Chapelgill
-	../
-0
 D/home/chris/Pictures
 	Auchnafree/
 1
@@ -629,8 +620,17 @@ D/home/chris/Pictures/Wallpapers
 	Horror
 1
 D/home/chris/Pictures/Wallpapers/Horror
-	824345-grim-reaper.jpg
+	abiss_by_almanegra.jpg
+3
+D/home/chris/Pictures/Wallpapers
+	Horror
 1
+D/home/chris/Pictures
+	Wallpapers
+25
+D/home/chris
+	Pictures
+7
 D
 
 # Command line history (oldest to newest):
@@ -724,7 +724,6 @@ pWyrmwood
 |.zip
 
 # Registers:
-""/run/media/chris/VIDEOS/.vifm-Trash-1000/001_test
 
 # Directory stack (oldest to newest):
 
@@ -737,16 +736,6 @@ t/home/chris/.vifm/Trash/000_of
 	/home/chris/Pictures/of
 t/home/chris/.vifm/Trash/000_P3054562.JPG
 	/home/chris/Pictures/Cairnsmore of Fleet/P3054562.JPG
-t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_test3
-	/run/media/chris/VIDEOS/test3
-t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_test
-	/run/media/chris/VIDEOS/test
-t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_test2
-	/run/media/chris/VIDEOS/test2
-t/run/media/chris/VIDEOS/.vifm-Trash-1000/000_824345-grim-reaper.jpg
-	/run/media/chris/VIDEOS/test/824345-grim-reaper.jpg
-t/run/media/chris/VIDEOS/.vifm-Trash-1000/001_test
-	/run/media/chris/VIDEOS/test
 
 # State:
 f
