@@ -1,0 +1,300 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[theme]
+dark-grey =  #222222
+light-grey = #444444
+grey =       #555555
+off-white =  #dfdfdf
+blue =       #0a6cf5
+yellow =     #ffb52a
+deep-red =   #bd2c40
+bright-red = #e60053
+
+[colors]
+; dark-grey
+background = #222222
+; light-grey
+background-alt = #444444
+; off-white
+foreground = #dfdfdf
+; grey
+foreground-alt = #555555
+; yellow
+primary = #ffb52a
+; bright-red
+secondary = #e60053
+; deep-red
+alert = #bd2c40
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[bar/topbar]
+width = 94%
+height = 36
+offset-x = 3%
+offset-y = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 2
+overline-color = #f00
+underline-size = 2
+underline-color = #00f
+
+border-bottom-size = 2
+border-bottom-color = #333
+
+padding-left = 2
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Roboto:size=10:fontformat=truetype;-3
+font-1 = FontAwesome:size=13;-2
+font-2 = Roboto:size=14:fontformat=truetype
+
+modules-left = app-menu files browser bspwm xwindow
+modules-center = time
+modules-right = memory cpu battery temperature powermenu
+
+tray-position = right
+tray-maxsize = 22
+tray-padding = 0
+
+m-restack = bspwm
+
+[module/files]
+type = custom/text
+content = "  "
+click-left = "nemo &"
+
+
+[module/browser]
+type = custom/text
+content = "   "
+click-left = "~/Apps/qutebrowser/qutebrowser.py &"
+
+[module/app-menu]
+type = custom/text
+content = "   "
+click-left = "~/bin/pymenu.py &"
+
+[module/xwindow]
+type = internal/xwindow
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+label = %title:0:50:...%
+
+
+[module/bspwm]
+type = internal/bspwm
+
+; label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; label-occupied = %index%
+label-occupied-padding = 2
+
+; label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+
+# xbacklight does not work with modesetting driver
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = %percentage%% 
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+
+bar-width = 10
+bar-indicator = │
+bar-indicator-foreground = #ff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "" "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
+label = %percentage%%
+
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used%%
+
+
+[module/time]
+type = custom/script
+interval = 5
+exec = echo "  $(date +%H:%M)  "
+label-font = 3
+format-underline = #0a6cf5
+click-left = galendae &
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = ""
+date-alt = " %A %d %b %Y  "
+
+time = "  %H:%M "
+time-alt = "  %H:%M"
+
+; format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %time% %date%
+label-font = 3
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+format-volume-prefix = "  "
+format-volume-prefix-foreground = ${colors.foreground-alt}
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-indicator-foreground = #ff
+bar-volume-fill = -
+bar-volume-fill-font = 2
+bar-volume-empty = -
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+click-right = xterm
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+time-format = %H:%M
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% (%time%)
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = "  "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-foreground = ${colors.foreground-alt}
+
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open =   power
+label-open-foreground = ${colors.secondary}
+label-close =   cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+; vim:ft=dosini

@@ -21,6 +21,8 @@ rm ~/.config/sxhkd
 ln -s $here/sxhkd ~/.config/sxhkd
 rm ~/.vifm
 ln -s $here/vifm ~/.vifm
+rm ~/.config/polybar
+ln -s $here/polybar ~/.config/polybar
 rm ~/.shell
 ln -s $here/shell ~/.shell
 rm ~/.i3

@@ -2,15 +2,17 @@
 
 sxhkd &
 
-bspc config bottom_padding      50
-bspc config border_width         1
-bspc config window_gap          10
+# bspc config bottom_padding        50
+bspc config border_width            1
+bspc config focused_border_color    \#ffb52a
+bspc config normal_border_color     \#555555
+bspc config window_gap              10
 
-bspc config split_ratio          0.50
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
-bspc config click_to_focus       true
-bspc config history_aware_focus  true
+bspc config split_ratio             0.50
+bspc config borderless_monocle      true
+bspc config gapless_monocle         true
+bspc config click_to_focus          true
+bspc config history_aware_focus     true
 
 bspc monitor -d Term Web Dev SSH
 
@@ -21,13 +23,10 @@ bspc rule -a Lxappearance state=floating center=true
 
 xsetroot -cursor_name left_ptr &
 compton &
-dunst -config /home/chris/.i3/dunst.conf &
 feh --bg-scale ~/Pictures/Wallpapers/Horror/the_dark_ages_by_jonasdero-d55wvrb.jpg &
-xfce4-power-manager &
+~/Projects/polybar/build/bin/polybar topbar &
+sleep 1; dunst -config /home/chris/.i3/dunst.conf &
+sleep 1; xfce4-power-manager &
 udiskie --tray &
 nm-applet &
 volumeicon &
-evilvte &
-# sleep 1; ~/Projects/polybar/build/bin/polybar example &
-sleep 1; tint2 &
-sleep 1; xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -n tint2) &

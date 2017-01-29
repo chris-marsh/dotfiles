@@ -163,10 +163,19 @@ def loadImage(name):
   image.set_pixel_size(iconSize)
   return image
 
+'''
+gtk.STATE_NORMAL	State during normal operation.
+gtk.STATE_ACTIVE	State of a currently active widget, such as a depressed button.
+gtk.STATE_PRELIGHT	State indicating that the mouse pointer is over the widget and the widget will respond to mouse clicks.
+gtk.STATE_SELECTED	State of a selected item, such the selected row in a list.
+gtk.STATE_INSENSITIVE	State indicating that the widget is unresponsive to user actions.
+'''
 
 def createMenu():
   tree, categories = loadApplications()
   menu = gtk.Menu()
+  # menu.modify_bg(gtk.STATE_NORMAL, gtk.gdk.Color('#222'))
+  # menu.modify_bg(gtk.STATE_SELECTED, gtk.gdk.Color('#ffb52a'))
   menu.connect("destroy", destroy)
   for c in sorted(tree):
     category = categories[c]
