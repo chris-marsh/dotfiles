@@ -92,7 +92,7 @@ filetype plugin indent on   " Use default filetype settings
 syntax on                   " Switch on syntax highlighting
 set background=dark         " Hint to colorscheme a dark background is in use
 colorscheme gruvbox         " Set the color scheme
-hi Normal ctermbg=none  " clear amy scheme background colors to show terminal background
+" hi Normal ctermbg=none  " clear amy scheme background colors to show terminal background
 
 " Map Ctrl+[hjkl] to navigate windows vim style
 nnoremap <silent> <C-h> <C-w>h

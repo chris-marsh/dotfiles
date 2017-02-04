@@ -11,8 +11,8 @@ fi
 export TERMINAL=/home/chris/bin/evilvte
 
 exec bspwm
-# exec i3
 # exec startxfce4
+# exec i3
 # exec cinnamon-session
 # export KDEWM=/usr/bin/i3
 # exec startkde

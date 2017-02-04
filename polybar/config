@@ -63,7 +63,7 @@ font-0 = Roboto:size=10:fontformat=truetype;-3
 font-1 = FontAwesome:size=13;-2
 font-2 = Roboto:size=14:fontformat=truetype
 
-modules-left = app-menu files browser bspwm xwindow
+modules-left = app-menu files browser bspwm windowTitle 
 modules-center = time
 modules-right = memory cpu battery temperature powermenu
 
@@ -89,11 +89,22 @@ type = custom/text
 content = "   "
 click-left = "~/bin/pymenu.py &"
 
+
 [module/xwindow]
 type = internal/xwindow
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %title:0:50:...%
+
+
+[module/windowTitle]
+type = custom/script
+exec = echo "$(xdotool getactivewindow getwindowname)"
+interval = 1
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+click-left = "bspc node -f next.local"
+label = %output:0:50:...%
 
 
 [module/bspwm]
@@ -162,7 +173,8 @@ interval = 5
 exec = echo "  $(date +%H:%M)  "
 label-font = 3
 format-underline = #0a6cf5
-click-left = galendae &
+; format-underline = #5C1768
+click-left = "galendae &"
 
 
 [module/date]

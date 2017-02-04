@@ -1,10 +1,11 @@
 #!/bin/sh
 
+# Load sxhkd to handle the key bindings
 sxhkd &
 
-# bspc config bottom_padding        50
+# Window settings
 bspc config border_width            1
-bspc config focused_border_color    \#ffb52a
+bspc config focused_border_color    \#0a6cf5
 bspc config normal_border_color     \#555555
 bspc config window_gap              10
 
@@ -14,13 +15,17 @@ bspc config gapless_monocle         true
 bspc config click_to_focus          true
 bspc config history_aware_focus     true
 
+# Set the desktops
 bspc monitor -d Term Web Dev SSH
 
+# Per application rules
 bspc rule -a Gimp desktop=^4 follow=on
 bspc rule -a Firefox desktop=^2 follow=on border=off
 bspc rule -a qutebrowser desktop=^2 follow=on border=off
 bspc rule -a Lxappearance state=floating center=true
+bspc rule -a Galendae border=off
 
+# Startup 
 xsetroot -cursor_name left_ptr &
 compton &
 feh --bg-scale ~/Pictures/Wallpapers/Horror/the_dark_ages_by_jonasdero-d55wvrb.jpg &
@@ -30,3 +35,7 @@ sleep 1; xfce4-power-manager &
 udiskie --tray &
 nm-applet &
 volumeicon &
+# For fullscreen apps, move polybar & its tray down a level
+xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -n polybar) &
+xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -n tray) &
+

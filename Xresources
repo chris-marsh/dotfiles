@@ -1,8 +1,10 @@
 !-- Xft settings -- !
+Xft.lcdfilter:  lcddefault
 Xft.antialias:  true
-Xft.rgba:       rgb
+Xft.autohint:   0
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
+Xft.rgba:       rgb
 
 ! -- General Setting -- !
 URxvt*scrollBar: false
@@ -34,8 +36,8 @@ XTerm*faceName: Liberation Mono for Powerline:minspace=true:hinting=true:rgba=no
 XTerm*faceSize: 10
 XTerm*scaleHeight: 1.01
 Xterm*transparent: true
-! -- Colors, match all terminals (urxvt & xterm) -- !
 
+! -- Colors, match all terminals (urxvt & xterm) -- !
 *.foreground: #DEDACF
 *.background: #171717
 *.cursorColor: #FF0000
