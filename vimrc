@@ -92,7 +92,7 @@ filetype plugin indent on   " Use default filetype settings
 syntax on                   " Switch on syntax highlighting
 set background=dark         " Hint to colorscheme a dark background is in use
 colorscheme gruvbox         " Set the color scheme
-" hi Normal ctermbg=none  " clear amy scheme background colors to show terminal background
+hi Normal ctermbg=none  " clear amy scheme background colors to show terminal background
 
 " Map Ctrl+[hjkl] to navigate windows vim style
 nnoremap <silent> <C-h> <C-w>h
@@ -109,11 +109,11 @@ nnoremap <silent> <C-Right> <C-w>l
 " Page up/down will scroll half-page and center current line on the screen
 nnoremap <silent> <PageUp> <C-U>zz
 vnoremap <silent> <PageUp> <C-U>zz
-inoremap <silent> <PageUp> <C-\><C-O><C-U>zz
+inoremap <silent> <PageUp> <C-O><C-U><C-O>zz
 
 nnoremap <silent> <PageDown> <C-D>zz
 vnoremap <silent> <PageDown> <C-D>zz
-inoremap <silent> <PageDown> <C-\><C-O><C-D>zz
+inoremap <silent> <PageDown> <C-O><C-D><C-O>zz
 
 " Increase/descrease window split size
 if bufwinnr(1)
