@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Use vundle to manage/load the plugins
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree.git'
+" Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'itchyny/lightline.vim'
@@ -69,6 +69,7 @@ set hlsearch        " Highlight search matches``
 set incsearch       " Search as you type
 set history=1000    " command line history
 set undolevels=1000 " Undo edits
+set wildcharm=<Tab>	" Needed to open the wildmenu from shortcuts
 set wildmenu        " Tab completion for command mode
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
 set title           " Set the window title
@@ -88,11 +89,15 @@ set backupdir=~/.vim/backup//   " Keep backups away from working files
 set directory=~/.vim/swp//      " Keep swp file away from working files
 set swapfile backup undofile    " Set persistent undo etc
 
-filetype plugin indent on   " Use default filetype settings
-syntax on                   " Switch on syntax highlighting
-set background=dark         " Hint to colorscheme a dark background is in use
-colorscheme gruvbox         " Set the color scheme
-hi Normal ctermbg=none  " clear amy scheme background colors to show terminal background
+" netrw file browser settings
+let g:netrw_banner=0		    " Hide the directory banner
+let g:netrw_liststyle=3		    " 0=thin; 1=long; 2=wide; 3=tree
+
+filetype plugin indent on       " Use default filetype settings
+syntax on                       " Switch on syntax highlighting
+set background=dark             " Hint to colorscheme a dark background is in use
+colorscheme gruvbox             " Set the color scheme
+" hi Normal ctermbg=none        " clear any scheme bg colors to show terminal bg
 
 " Map Ctrl+[hjkl] to navigate windows vim style
 nnoremap <silent> <C-h> <C-w>h
@@ -122,7 +127,7 @@ if bufwinnr(1)
 endif
 
 " F1 to Toggle NerdTree
-nmap <silent> <F1> :NERDTreeToggle<CR>
+" nmap <silent> <F1> :NERDTreeToggle<CR>
 
 " F2 to toggle paste mode
 nnoremap <silent> <F2> :set paste!<CR>
@@ -131,6 +136,9 @@ nnoremap <silent> <F2> :set paste!<CR>
 nnoremap <silent> <F3> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 let mapleader=","
+
+" Open netrw filebrowser in current window, with current file selected
+nmap <leader>e :e .<CR>
 
 " Quick save the current file
 nmap <leader>w :w<CR>

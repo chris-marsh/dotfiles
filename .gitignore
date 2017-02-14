@@ -1,0 +1,7 @@
+.*.un~
+*.un~
+vifm/Trash/
+vim/backup/
+vim/undo/
+vim/swp/
+vim/.netrwhist
