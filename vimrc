@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Use vundle to manage/load the plugins
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'itchyny/lightline.vim'
@@ -48,6 +47,10 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" netrw file browser settings
+let g:netrw_banner=0		    " Hide the directory banner
+let g:netrw_liststyle=3		    " 0=thin; 1=long; 2=wide; 3=tree
+
 set shell=/bin/bash
 set backspace=indent,eol,start  " Make bs work across line breaks etc
 set hidden          " opening new file hides current instead of closing
@@ -80,18 +83,12 @@ set lazyredraw      " Redraw only when needed
 set laststatus=2    " Always display the status line
 set cursorline      " Highlight the current line
 set confirm         " Don't fail commands on unsaved files
-" set colorcolumn=85
-set guioptions-=T   " Hide the toolbar on Gvim
 set encoding=utf-8  " Vim recommended setting
 set clipboard=unnamed   " Use system clipboard
 set undodir=~/.vim/undo//       " Keep undo away from working files/dirs
 set backupdir=~/.vim/backup//   " Keep backups away from working files
 set directory=~/.vim/swp//      " Keep swp file away from working files
 set swapfile backup undofile    " Set persistent undo etc
-
-" netrw file browser settings
-let g:netrw_banner=0		    " Hide the directory banner
-let g:netrw_liststyle=3		    " 0=thin; 1=long; 2=wide; 3=tree
 
 filetype plugin indent on       " Use default filetype settings
 syntax on                       " Switch on syntax highlighting
