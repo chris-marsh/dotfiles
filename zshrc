@@ -12,6 +12,7 @@ fi
 
 # Customize to your needs...
 source ~/.dotfiles/shell/aliases.sh
+source ~/.profile
 
 export PATH=$PATH:~/.dotfiles/bin:.
 export EDITOR=vim
@@ -38,7 +39,7 @@ if [ "$TERM" = "linux" ]; then
   "
   # get rid of artifacts
   clear
-fi
+ fi
 
 if [ "$TERM" = "xterm" ]; then
     TERM=xterm-256color

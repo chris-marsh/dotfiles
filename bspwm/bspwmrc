@@ -27,14 +27,15 @@ bspc rule -a Galendae border=off
 
 # Startup 
 xsetroot -cursor_name left_ptr &
-compton &
-feh --bg-scale ~/Pictures/Wallpapers/Horror/the_dark_ages_by_jonasdero-d55wvrb.jpg &
+compton --backend=glx&
+feh --bg-scale ~/Pictures/Wallpaper/wp1.jpg &
 ~/Projects/polybar/build/bin/polybar topbar &
 sleep 1; dunst -config /home/chris/.i3/dunst.conf &
 sleep 1; xfce4-power-manager &
 udiskie --tray &
 nm-applet &
 volumeicon &
+
 # For fullscreen apps, move polybar & its tray down a level
 xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -n polybar) &
 xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -n tray) &
