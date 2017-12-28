@@ -1,17 +1,4 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-. ~/.shell/aliases.sh
-. ~/.shell/functions.sh
-
-export EDITOR=vim
-export PATH=$PATH:~/.dotfiles/bin:.
-
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+#!/bin/bash
 
 RESET="\[\033[0m\]"
 GREEN="\[\033[01;32m\]"
@@ -29,19 +16,17 @@ function parse_git_branch {
   fi  
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   PS_BRANCH="(git ${ref#refs/heads/}) "
+  echo $PS_BRANCH
 }
 
+# Bash provides an environment variable called PROMPT_COMMAND.
+# The contents of this variable are executed as a regular Bash
+# command just before Bash displays a prompt. 
 PROMPT_COMMAND=parse_git_branch
+echo $PROMPT_COMMAND
 
 PS_INFO="$GREEN(\u$YELLOW@$GREEN\h) $BLUE(\w)"
 PS_GIT="$YELLOW\$PS_BRANCH"
 PS_TIME="$YELLOW(\t) "
-export PS1="\n${PS_INFO} ${PS_GIT}\n${RESET}$ "
 
-source ~/.shell/powerline_ps1.sh
-
-if [ "$TERM" = "xterm" -o "$TERM" = "rxvt-unicode-256color" ]; then
-    export TERM=xterm-256color
-fi
-
-archey3
+echo -e "\e[47m\e[30m chris@cruachan \e[0m\e[32m\e[44m\e0\e[30m ~ \e[0m\e[34m\e[0m"

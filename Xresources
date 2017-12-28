@@ -26,9 +26,15 @@ URxvt.keysym.Control-Left:	\033[1;5D
 URxvt.keysym.Control-Right:	\033[1;5C
 
 ! -- uRxvt Font -- !
-URxvt.font: xft:Liberation Mono for Powerline:Regular:size=10
-URxvt.boldfont: xft:Liberation Mono for Powerline:Regular:size=10
-URxvt.fading:  0
+/* URxvt.font: xft:Liberation Mono for Powerline:Regular:size=10 */
+/* URxvt.boldfont: xft:Liberation Mono for Powerline:Regular:size=10 */
+/* URxvt.fading:  0 */
+/* URxvt.letterSpace: -1 */
+
+/* fonts */
+URxvt.font:         xft:Hack-Regular:pixelsize=12,xft:Symbola
+URxvt.boldFont:     xft:Hack-Bold:pixelsize=12:weight=bold,xft:Symbola
+URxvt.italicFont: xft:Hack-RegularOblique:pixelsize=12:slant=italic,xft:Symbola
 URxvt.letterSpace: -1
 
 ! -- XTerm Font -- !
@@ -38,22 +44,43 @@ XTerm*scaleHeight: 1.01
 Xterm*transparent: true
 
 ! -- Colors, match all terminals (urxvt & xterm) -- !
-*.foreground: #DEDACF
-*.background: #171717
-*.cursorColor: #FF0000
-*.color0: #000000
-*.color1: #FF615A
-*.color2: #B1E969
-*.color3: #EBD99C
-*.color4: #5DA9F6
-*.color5: #E86AFF
-*.color6: #82FFF7
-*.color7: #DEDACF
-*.color8: #313131
-*.color9: #F58C80
-*.color10: #DDF88F
-*.color11: #EEE5B2
-*.color12: #A5C7FF
-*.color13: #DDAAFF
-*.color14: #B7FFF9
-*.color15: #FFFFFF
+/* *.foreground: #DEDACF */
+/* *.background: #171717 */
+/* *.cursorColor: #FF0000 */
+/* *.color0: #000000 */
+/* *.color1: #FF615A */
+/* *.color2: #B1E969 */
+/* *.color3: #EBD99C */
+/* *.color4: #5DA9F6 */
+/* *.color5: #E86AFF */
+/* *.color6: #82FFF7 */
+/* *.color7: #DEDACF */
+/* *.color8: #313131 */
+/* *.color9: #F58C80 */
+/* *.color10: #DDF88F */
+/* *.color11: #EEE5B2 */
+/* *.color12: #A5C7FF */
+/* *.color13: #DDAAFF */
+/* *.color14: #B7FFF9 */
+/* *.color15: #FFFFFF */
+
+URxvt.foreground: #dedacf
+URxvt.background: #171717
+URxvt.cursorColor: #FF0000
+URxvt.color0: #000000
+URxvt.color1: #ff615a
+URxvt.color2: #b1e969
+URxvt.color3: #ebd99c
+URxvt.color4: #5da9f6
+URxvt.color5: #e86aff
+URxvt.color6: #82fff7
+URxvt.color7: #dedacf
+URxvt.color8: #313131
+URxvt.color9: #f58c80
+URxvt.color10: #ddf88f
+URxvt.color11: #eee5b2
+URxvt.color12: #a5c7ff
+URxvt.color13: #ddaaff
+URxvt.color14: #b7fff9
+URxvt.color15: #ffffff
+

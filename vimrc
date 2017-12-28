@@ -13,13 +13,11 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
-Plugin 'SirVer/ultisnips.git'
-Plugin 'honza/vim-snippets'
-Plugin 'python-mode/python-mode.git'
+Plugin 'w0rp/ale.git'
 call vundle#end()
 
-let g:pymode_python = 'python3'
-let g:pymode_options_colorcolumn = 0
+" Enable completion where available.
+let g:ale_completion_enabled = 1
 
 " Ultisnips Settings
 let g:UltiSnipsExpandTrigger="<c-c>"
@@ -129,7 +127,7 @@ set noerrorbells    " Don't disturb me!
 set lazyredraw      " Redraw only when needed
 set laststatus=2    " Always display the status line
 set colorcolumn=0
-" set cursorline      " Highlight the current line
+set cursorline      " Highlight the current line
 set confirm         " Don't fail commands on unsaved files
 set encoding=utf-8  " Vim recommended setting
 set clipboard=unnamed   " Use system clipboard
@@ -229,3 +227,11 @@ function! CycleLineNumbers()
         endif
     endif
 endfunc
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
+

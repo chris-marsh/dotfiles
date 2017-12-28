@@ -1,37 +1,18 @@
 # i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
 
-# Gap settings ...
-# set $default_gaps_inner 4
-# set $default_gaps_outer 2
-# gaps inner $default_gaps_inner
-# gaps outer $default_gaps_outer
-# smart_borders no_gaps
-# for_window [class="^.*"] border pixel 0
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start evilvte terminal
-bindsym $mod+Return exec ~/bin/evilvte
+bindsym $mod+Return exec urxvt
 
+bindsym $mod+space exec launchRofi
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+Shift+d exec --no-startup-id dmenu_run -fn '-*-droid sans-medium-r-normal-*-14-*-*-*-*-*-*-*' -p Command
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn '-*-droid sans-medium-r-normal-*-14-*-*-*-*-*-*-*' -p Command"
 
 # Switch windows with cursor keys ...
 bindsym $mod+Left focus left
@@ -60,10 +41,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+l floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+l focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -73,6 +54,7 @@ bindsym $mod+a focus parent
 
 workspace_auto_back_and_forth yes
 bindsym $mod+z workspace back_and_forth
+
 # switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -133,56 +115,14 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
-# Audio Hardware Keys ....
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
-
-# Pulse Audio controls
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-
-# Screen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
- 
 # Take a screenshot and save it in ~/tmp/screenshots
 bindsym --release Print exec --no-startup-id ~/bin/screenshot.py
-
-# Toggle the touchpad
-bindsym $mod+t exec --no-startup-id ~/bin/touchpad.sh
-
-# Launch a calendar viewer
-bindsym $mod+c exec --no-startup-id ~/.bin/calendar.py
 
 # Default colors ...        border   backgr.  text      indicator
 client.focused              #4c7899  #00a5ff  #ffffff   #2e9ef4
 client.focused_inactive     #333333  #5f676a  #ffffff   #484e50
 client.unfocused            #333333  #222222  #888888   #292d2e
 client.urgent               #2f343a  #900000  #ffffff   #900000
-
-# client.focused              #ee8262  #8B4C39  #ffffff   #ff57211
-
-# Start i3bar to display a workspace bar
-# (plus the system information i3status finds out, if available)
-# bar {
-#     colors {
-#         background #000000
-#         statusline #00A5FF #that neon blue
-#         separator #666666
-# 
-#         focused_workspace  #4c7899 #285577 #ffffff
-#         active_workspace   #333333 #5f676a #ffffff
-#         inactive_workspace #333333 #222222 #888888
-#         urgent_workspace   #2f343a #900000 #ffffff
-# 
-#         # statusline         #8b4c39
-#         # focused_workspace  #ee8262 #8b4c39 #ffffff
-#     }
-# 	font pango:DejaVu Sans Mono, FontAwesome 11
-#     status_command i3status -c ~/.i3/i3status.conf
-# }
 
 # Specific app settings
 for_window [class="\w*"] border pixel 1
@@ -198,63 +138,32 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [class="Screenkey"] floating enable
 
-# Set touchpad sensitivity & mouse acceleration
-exec --no-startup-id xinput --set-prop 14 "Synaptics Finger" 15 35 257
-exec --no-startup-id xinput --set-prop 14 "Synaptics Noise Cancellation" 28 28
-exec --no-startuo-id xset m 3/2 4
-
-# Add a small delay to prevent suspend races
-# https://bugs.launchpad.net/ubuntu/+source/unity-2d/+bug/830348
-set $Locker ~/bin/autolock.sh && sleep 1
-
-# Bind Pause key to show menu in the tray, for ...
-set $mode_system System:  (l) Lock | (s) Suspend | (e) Logout | (r) Reboot | (Shift+s) Shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"  
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym Pause mode "$mode_system"
-
 # Create and name workspaces
-exec --no-startup-id i3-msg 'workspace 1  ssh; exec ~/bin/evilvte'
-exec --no-startup-id i3-msg 'workspace 2  www; exec ~/bin/evilvte'
-exec --no-startup-id i3-msg 'workspace 3  dev; exec ~/bin/evilvte'
-exec --no-startup-id i3-msg 'workspace 4  fm; exec ~/bin/evilvte'
+# exec --no-startup-id i3-msg 'workspace 1  ssh; exec ~/bin/evilvte'
+# exec --no-startup-id i3-msg 'workspace 2  www; exec ~/bin/evilvte'
+# exec --no-startup-id i3-msg 'workspace 3  dev; exec ~/bin/evilvte'
+# exec --no-startup-id i3-msg 'workspace 4  fm; exec ~/bin/evilvte'
 
 # -- Startup programs -- #
 
-exec nm-applet
-# Start tint2 panel
-exec tint2
-# Run dunst for notifications
-exec killall -q dunst
-exec --no-startup-id dunst -config ~/.i3/dunst.conf
-# Use feh to set a workspace background image
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wp2.jpg
-# Switch off the annoying terminal bell
-exec --no-startup-id /usr/bin/xset b off
+# Set the wallpaper
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpaper/wp2.jpg
+
 # Start compton for transparancey effects
-exec --no-startup-id compton --config ~/.compton.conf 
-# udiskie to automount usb,mmc,etc
-exec --no-startup-id udiskie --tray
+# exec --no-startup-id compton --config ~/.compton.conf 
 
-# -- Power Management -- #
-# 
-# (10 minutes) -> Blur & lock -> (10 minutes) -> screen off -> (10 minutes) -> suspend system
+## Plasma Integration
+# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
-# Suspend the system after 30 minutes, locking the screen & bluring at 10 minutes (1200s before 30m)
-# exec --no-startup-id xautolock -time 30 -locker "~/bin/suspend.sh" -notify 1200 -notifier "~/bin/autolock.sh"
-# Switch off the screen (standby & suspend disabled) between the blur & suspend @ 20 minutes
-# exec --no-startup-id xset dpms 0 0 1200
-# Disable the screensaver
-# exec --no-startup-id xset s off 
-
-# exec --no-startup-id ~/bin/powerman.sh
-
+## Avoid tiling popups, dropdown windows from plasma
+# for the first time, manually resize them, i3 will remember the setting for floating windows
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none

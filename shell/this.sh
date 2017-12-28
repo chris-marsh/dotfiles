@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Based on https://github.com/abhijitvalluri/bash-powerline-shell
+# TODO: Currently, this is hardcoded. Ideally, this should be rewritten to be configurable.
 
 function ps1_powerline {
   RETCODE=$? # save return code

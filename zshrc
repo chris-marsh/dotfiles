@@ -41,7 +41,7 @@ if [ "$TERM" = "linux" ]; then
   clear
  fi
 
-if [ "$TERM" = "xterm" ]; then
+if [ "$TERM" = "xterm" ] || [ "$TERM" = "rxvt-unicode-256color" ]; then
     TERM=xterm-256color
 fi
 
