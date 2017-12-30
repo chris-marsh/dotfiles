@@ -16,46 +16,60 @@ function ps1_powerline {
         GIT_BRANCH="${ref#refs/heads/}"
     fi
 
-    local HOST_START="${colors[Black]}${colors[On_White]} \u@\h"
-    local HOST_END="${colors[White]}${colors[On_Blue]}"
+    local HOST_BG="Yellow"
+    local HOST_FG="Black"
+    local PATH_BG="Blue"
+    local PATH_FG="Black"
+    local PATH_RO_BG="Red"
+    local PATH_RO_FG="Black"
+    local JOBS_BG="Purple"
+    local JOBS_FG="Black"
+    local GIT_BG="Green"
+    local GIT_FG="Black"
+    local PROMPT_BG="IBlack"
+    local PROMPT_FG="White"
+    local RET_BG="Red"
+    local RET_FG="Black"
 
-    local GIT_START="${colors[Black]}${colors[On_Yellow]} "
-    local GIT_END="${colors[Yellow]}${colors[On_IBlack]}"
-    local GIT_END_RET="${colors[Yellow]}${colors[On_Red]}"             # next segment is prompt with return code
+    local HOST_START="${colors[$HOST_FG]}${colors[On_$HOST_BG]} \u@\h"
+    local HOST_END="${colors[$HOST_BG]}${colors[On_$PATH_BG]}"
 
-    local JOBS="${colors[Black]}${colors[On_Purple]} ⏎"
-    local JOBS_END="${colors[Purple]}${colors[On_IBlack]}"             # next segment is prompt
-    local JOBS_NO_RET_END="${colors[Purple]}${colors[On_Yellow]}"      # next segment is git
-    local JOBS_NO_GIT_END="${colors[Purple]}${colors[On_Red]}"         # next segment is prompt with return code
-
-    local RET="${colors[Black]}${colors[On_Red]}"
-    local RET_END="${colors[Color_off]}${colors[Red]}${colors[Color_Off]}"
-
-    local PROMPT="${colors[White]}${colors[On_IBlack]}"
-    local PROMPT_END="${colors[Color_Off]}${colors[IBlack]}${colors[Color_Off]}"
-
-    local PATH_START="${colors[Black]}${colors[On_Blue]} \W"
-
+    local PATH_START="${colors[$PATH_FG]}${colors[On_$PATH_BG]} \W"
     if [ -w "$PWD" ]; then
         # Current directory is writeable
-        local PATH_END="${colors[Blue]}${colors[On_Yellow]}"               # next segment is git
-        local PATH_END_JOBS="${colors[Blue]}${colors[On_Purple]}"          # next segment is jobs
-        local PATH_END_ALT="${colors[Blue]}${colors[On_IBlack]}"           # next segment is prompt
-        local PATH_END_RET="${colors[Blue]}${colors[On_Red]}"              # next segment is prompt with return code
+        local PATH_END="${colors[$PATH_BG]}${colors[On_$GIT_BG]}"            # next segment is git
+        local PATH_END_JOBS="${colors[$PATH_BG]}${colors[On_$JOBS_BG]}"      # next segment is jobs
+        local PATH_END_ALT="${colors[$PATH_BG]}${colors[On_$PROMPT_BG]}"     # next segment is prompt
+        local PATH_END_RET="${colors[$PATH_BG]}${colors[On_$RET_BG]}"        # next segment is prompt with return code
     else
         # Current directory is not writable
-        PATH_END="${colors[Blue]}${colors[On_Red]}"
-        PATH_END+="${colors[White]}${colors[On_Red]}  ${colors[Red]}${colors[On_IBlack]}"
+        PATH_END="${colors[$PATH_BG]}${colors[On_$PATH_RO_BG]}"
+        PATH_END+="${colors[$PATH_RO_FG]}${colors[On_$PATH_RO_BG]}  ${colors[$PATH_RO_BG]}${colors[On_$PROMPT_BG]}"
 
-        PATH_END_JOBS="${colors[Blue]}${colors[On_Red]}"
-        PATH_END_JOBS+="${colors[Black]}${colors[On_Red]}  ${colors[Red]}${colors[On_Purple]}"
+        PATH_END_JOBS="${colors[$PATH_BG]}${colors[On_$PATH_RO_BG]}"
+        PATH_END_JOBS+="${colors[$PATH_RO_FG]}${colors[On_$PATH_RO_BG]}  ${colors[$PATH_RO_BG]}${colors[On_$JOBS_BG]}"
 
-        PATH_END_ALT="${colors[Blue]}${colors[On_Red]}"
-        PATH_END_ALT+="${colors[Black]}${colors[On_Red]}  ${colors[Red]}${colors[On_IBlack]}"
+        PATH_END_ALT="${colors[$PATH_BG]}${colors[On_$PATH_RO_BG]}"
+        PATH_END_ALT+="${colors[$PATH_RO_FG]}${colors[On_$PATH_RO_BG]}  ${colors[$PATH_RO_BG]}${colors[On_$PROMPT_BG]}"
 
-        PATH_END_RET="${colors[Blue]}${colors[On_Red]}"
-        PATH_END_RET+="${colors[Black]}${colors[On_Red]}  "
+        PATH_END_RET="${colors[$PATH_BG]}${colors[On_$PATH_RO_BG]}"
+        PATH_END_RET+="${colors[$PATH_RO_FG]}${colors[On_$PATH_RO_BG]}  "
     fi
+
+    local JOBS="${colors[$JOBS_FG]}${colors[On_JOBS_BG]} ⏎"
+    local JOBS_END="${colors[JOBS_BG]}${colors[On_$PROMPT_BG]}"          # next segment is prompt
+    local JOBS_NO_RET_END="${colors[JOBS_BG]}${colors[On_$GIT_BG]}"      # next segment is git
+    local JOBS_NO_GIT_END="${colors[JOBS_BG]}${colors[On_$RET_BG]}"      # next segment is prompt with return code
+
+    local GIT_START="${colors[$GIT_FG]}${colors[On_$GIT_BG]} "
+    local GIT_END="${colors[$GIT_BG]}${colors[On_$PROMPT_BG]}"           # next segment is prompt
+    local GIT_END_RET="${colors[$GIT_BG]}${colors[On_$RET_BG]}"          # next segment is prompt with return code
+
+    local RET="${colors[$RET_FG]}${colors[On_$RET_BG]}"
+    local RET_END="${colors[Color_off]}${colors[$RET_BG]}${colors[Color_Off]}"
+
+    local PROMPT="${colors[$PROMPT_FG]}${colors[On_$PROMPT_BG]}"
+    local PROMPT_END="${colors[Color_Off]}${colors[$PROMPT_BG]}${colors[Color_Off]}"
 
     PS1="$HOST_START $HOST_END"
 
