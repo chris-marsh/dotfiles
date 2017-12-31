@@ -1,19 +1,16 @@
 #!/bin/bash
 
-# Based on https://github.com/abhijitvalluri/bash-powerline-shell
+# Forked from https://github.com/abhijitvalluri/bash-powerline-shell
 
-script_dir="${BASH_SOURCE%/*}"
-if [[ ! -d "$script_dir" ]]; then script_dir="$PWD"; fi
-source "$script_dir/colors.sh"
+script_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+source "$script_dir/colors"
 
 function ps1_powerline {
     RETCODE=$? # save return code
     NUM_JOBS=$(jobs -p | wc -l)
-    ref=$(git symbolic-ref HEAD 2> /dev/null)
-    if [ -z "$ref" ]; then
-        GIT_BRANCH=""
-    else
-        GIT_BRANCH="${ref#refs/heads/}"
+    GIT_BRANCH=$(git symbolic-ref HEAD 2> /dev/null)
+    if [ ! -z "$GIT_BRANCH" ]; then
+        GIT_BRANCH="${GIT_BRANCH#refs/heads/}"
     fi
 
     local HOST_BG="Yellow"
@@ -21,7 +18,7 @@ function ps1_powerline {
     local PATH_BG="Blue"
     local PATH_FG="Black"
     local PATH_RO_BG="Red"
-    local PATH_RO_FG="Black"
+    local PATH_RO_FG="White"
     local JOBS_BG="Purple"
     local JOBS_FG="Black"
     local GIT_BG="Green"
@@ -29,7 +26,7 @@ function ps1_powerline {
     local PROMPT_BG="IBlack"
     local PROMPT_FG="White"
     local RET_BG="Red"
-    local RET_FG="Black"
+    local RET_FG="White"
 
     local HOST_START="${colors[$HOST_FG]}${colors[On_$HOST_BG]} \u@\h"
     local HOST_END="${colors[$HOST_BG]}${colors[On_$PATH_BG]}"
@@ -102,19 +99,19 @@ function ps1_powerline {
         # Is a git repo
         local NUM_MODIFIED=$(git diff --name-only --diff-filter=M | wc -l)
         if [ ! "$NUM_MODIFIED" -eq "0" ]; then
-            NUM_MODIFIED=" ✚$NUM_MODIFIED"
+            NUM_MODIFIED="  ✚$NUM_MODIFIED"
         else
             NUM_MODIFIED=""
         fi
         local NUM_STAGED=$(git diff --staged --name-only --diff-filter=AM | wc -l)
         if [ ! "$NUM_STAGED" -eq "0" ]; then
-            NUM_STAGED=" ✔$NUM_STAGED"
+            NUM_STAGED="  ✔$NUM_STAGED"
         else
             NUM_STAGED=""
         fi
         local NUM_CONFLICT=$(git diff --name-only --diff-filter=U | wc -l)
         if [ ! "$NUM_CONFLICT" -eq "0" ]; then
-            NUM_CONFLICT=" ✘$NUM_CONFLICT"
+            NUM_CONFLICT="  ✘$NUM_CONFLICT"
         else
             NUM_CONFLICT=""
         fi
