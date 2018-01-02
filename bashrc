@@ -38,7 +38,7 @@ PS_GIT="$YELLOW\$PS_BRANCH"
 PS_TIME="$YELLOW(\t) "
 export PS1="\n${PS_INFO} ${PS_GIT}\n${RESET}$ "
 
-source ~/.shell/ps1_prompt
+source ~/.shell/bash_powerline_prompt/powerline_prompt
 
 if [ "$TERM" = "xterm" -o "$TERM" = "rxvt-unicode-256color" ]; then
     export TERM=xterm-256color
