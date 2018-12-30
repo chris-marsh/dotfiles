@@ -14,15 +14,12 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale.git'
+Plugin 'mattn/emmet-vim'
+Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 
 " Enable completion where available.
 let g:ale_completion_enabled = 1
-
-" Ultisnips Settings
-let g:UltiSnipsExpandTrigger="<c-c>"
-let g:UltiSnipsListSnippets="<c-s-tab>"
-
 
 " CtrlP settings
 let g:ctrlp_max_height = 30

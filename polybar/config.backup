@@ -9,8 +9,10 @@ background = #222
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #555
-hilight = #e60053
-hilight-alt = #0a81f5
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+blue = #0a81f5
 
 ;=====================================================
 [bar/example]
@@ -61,15 +63,15 @@ blacklist-0 = num lock
 
 format-prefix = "⌨ "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-overline = ${colors.hilight}
+format-prefix-overline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-overline = ${colors.hilight}
+label-layout-overline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.hilight}
-label-indicator-overline = ${colors.hilight}
+label-indicator-background = ${colors.secondary}
+label-indicator-overline = ${colors.secondary}
 
 ;=====================================================
 [module/filesystem]
@@ -89,14 +91,14 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-overline= ${colors.hilight}
+label-focused-overline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = %index%
 label-occupied-padding = 2
 
 label-urgent = %index%!
-label-urgent-background = ${colors.hilight}
+label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = %index%
@@ -118,11 +120,11 @@ strip-wsnumbers = true
 ;pin-workspaces = true
 
 label-focused-foreground = ${colors.foreground}
-label-unfocused-foreground = ${colors.hilight-alt}
+label-unfocused-foreground = ${colors.foreground-alt}
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.background-alt}
+label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
@@ -161,7 +163,7 @@ interval = 2
 ; format-prefix = "" "
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-overline = ${colors.hilight}
+format-overline = #f90000
 label = %percentage:2%%
 
 ;=====================================================
@@ -170,7 +172,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-overline = ${colors.hilight}
+format-overline = #4bffdc
 label = %percentage_used%%
 
 ;=====================================================
@@ -179,7 +181,8 @@ type = custom/script
 interval = 5
 exec = echo "  $(date +%H:%M)  "
 label-font = 3
-label-foreground = ${colors.hilight-alt}
+; format-overline = ${colors.blue}
+label-foreground = ${colors.blue}
 click-left = "galendae &"
 
 ;=====================================================
@@ -190,7 +193,7 @@ adapter = AC
 full-at = 98
 time-format = %H:%M
 format-charging = <animation-charging> <label-charging>
-format-charging-overline = ${colors.hilight}
+format-charging-overline = #ffb52a
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%% (%time%)
@@ -228,7 +231,7 @@ format-warn-overline = ${self.format-overline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.hilight}
+label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
 ramp-1 = 
@@ -244,9 +247,9 @@ type = custom/menu
 format-spacing = 2
 
 label-open = "      "
-label-open-background = ${colors.hilight}
+label-open-background = ${colors.secondary}
 label-close = "      "
-label-close-background = ${colors.hilight}
+label-close-background = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 

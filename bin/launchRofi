@@ -19,6 +19,7 @@
 
 # gruvbox-dark.theme
 rofi -combi-modi window,drun,run -show combi \
+    -show-icons \
     -opacity 90 \
     -color-enabled true \
     -color-window "#282828, #a89984, #a89984" \
