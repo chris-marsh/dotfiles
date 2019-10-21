@@ -8,7 +8,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec gnome-terminal
 
 bindsym $mod+space exec launchRofi
 # kill focused window
@@ -145,10 +145,10 @@ for_window [class="pavucontrol"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
 # Create and name workspaces
-exec --no-startup-id i3-msg 'workspace 1:ssh; exec xfce4-terminal'
+exec --no-startup-id i3-msg 'workspace 1:ssh; exec gnome-terminal'
 exec --no-startup-id i3-msg 'workspace 2:www; exec firefox'
-exec --no-startup-id i3-msg 'workspace 3:dev; exec xfce4-terminal'
-exec --no-startup-id i3-msg 'workspace 4:fm; exec xfce4-terminal'
+exec --no-startup-id i3-msg 'workspace 3:dev; exec gnome-terminal'
+exec --no-startup-id i3-msg 'workspace 4:fm; exec gnome-terminal'
 
 # -- Startup programs -- #
 exec --no-startup-id ~/.myStartupApps

@@ -26,4 +26,4 @@ if [ "$TERM" = "xterm" -o "$TERM" = "rxvt-unicode-256color" ]; then
     export TERM=xterm-256color
 fi
 
-neofetch
+screenfetch
